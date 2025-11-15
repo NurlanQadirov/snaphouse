@@ -1,14 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Logo from './Logo';
+// Dəyişiklik: 'translations' importu silindi, yalnız 'useLanguage' qaldı
 import { useLanguage } from '../context/LanguageContext';
 
-// DÜZƏLİŞ BURADADIR:
-// Xətaya səbəb olan 'translations' obyektini import edirik
-import { translations } from '../i18n/languages'; 
-
 function Navbar() {
-  const { language, setLanguage, texts } = useLanguage(); // Dili götürürük
+  // 'setLanguage' və 'texts' birbaşa kontekstdən gəlir
+  const { language, setLanguage, texts } = useLanguage();
 
   return (
     <motion.header
@@ -24,8 +22,8 @@ function Navbar() {
         
         {/* Dil Dəyişmə Düymələri */}
         <div className="flex space-x-2">
-          {/* İndi 'translations' tərifi olduğu üçün bu kod düzgün işləyəcək */}
-          {Object.keys(translations).map((langKey) => (
+          {/* Artıq 'translations' obyektinə ehtiyac yoxdur */}
+          {['az', 'en', 'ru'].map((langKey) => (
             <button
               key={langKey}
               onClick={() => setLanguage(langKey)}
@@ -37,7 +35,8 @@ function Navbar() {
                 }
               `}
             >
-              {texts.nav[langKey]} {/* "AZ", "EN", "RU" */}
+              {/* Mətnlər 'texts' obyektindən gəlir */}
+              {texts.nav[langKey]}
             </button>
           ))}
         </div>

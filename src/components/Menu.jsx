@@ -1,9 +1,9 @@
-import React, { useState } from 'react'; // useState-i import etdiyimizdən əmin olun
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import MenuCategories from './MenuCategories';
 import SpecialsBanner from './SpecialsBanner';
 import MenuGrid from './MenuGrid';
-import Searchbar from './Searchbar'; // YENİ: Axtarış komponentini import edirik
+import Searchbar from './Searchbar';
 
 function Menu({ onItemSelected, mainContentRef }) { 
   const { texts } = useLanguage();
@@ -12,19 +12,17 @@ function Menu({ onItemSelected, mainContentRef }) {
   const menuData = texts.menu.menuData;
 
   const [selectedCategory, setSelectedCategory] = useState(categories[0].key);
-  
-  // YENİ: Axtarış üçün 'state' yaradırıq
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Kateqoriya dəyişəndə axtarışı sıfırlayırıq
   const handleSelectCategory = (categoryKey) => {
     setSelectedCategory(categoryKey);
-    setSearchTerm(''); // Axtarışı təmizlə
+    setSearchTerm('');
+    // Ağıllı scroll
+    mainContentRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Xüsusi yeməyi tapırıq
-  const specialItemArray = menuData.mainDishes || menuData.signature;
-  const specialItem = specialItemArray[0];
+  // DÜZƏLİŞ: Banner üçün 'mainDishes' yox, 'signature' istifadə edirik
+  const specialItem = menuData.signature[0]; // 'signature' kateqoriyasının ilk elementi
 
   return (
     <section id="menu" className="pb-16 max-w-5xl mx-auto">
@@ -32,19 +30,18 @@ function Menu({ onItemSelected, mainContentRef }) {
       <MenuCategories
         categories={categories}
         selectedCategory={selectedCategory}
-        onSelectCategory={handleSelectCategory} // Dəyişdi
+        onSelectCategory={handleSelectCategory}
         mainContentRef={mainContentRef}
       />
       
-      {/* 2. YENİ: Axtarış Zolağı */}
-      <div className="mt-6"> {/* Üst tərəfdən boşluq */}
+      {/* 2. Axtarış Zolağı */}
+      <div className="mt-6">
         <Searchbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       </div>
 
       {/* 3. Xüsusi Tövsiyə Banneri */}
-      {/* Axtarış zamanı banneri gizlədirik */}
       {!searchTerm && (
-        <div className="mb-6"> {/* 'my-6'-nı 'mb-6' etdik */}
+        <div className="mb-6">
           <SpecialsBanner 
             item={specialItem} 
             onClick={() => onItemSelected(specialItem)} 
@@ -54,10 +51,10 @@ function Menu({ onItemSelected, mainContentRef }) {
 
       {/* 4. Menyu Kartları (Axtarış nəticəsi ilə) */}
       <MenuGrid
-        key={selectedCategory} // Bu vacibdir, amma 'searchTerm'ə görə yox
-        menuData={menuData} // Bütün datanı ötürürük
+        key={selectedCategory + searchTerm} // Axtarış dəyişəndə də animasiyanı tətikləyirik
+        menuData={menuData}
         selectedCategory={selectedCategory}
-        searchTerm={searchTerm} // Axtarış mətnini ötürürük
+        searchTerm={searchTerm}
         onItemSelected={onItemSelected}
       />
     </section>
