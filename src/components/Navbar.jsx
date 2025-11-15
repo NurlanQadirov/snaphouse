@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Logo from './Logo';
-// Dəyişiklik: 'translations' importu silindi, yalnız 'useLanguage' qaldı
 import { useLanguage } from '../context/LanguageContext';
+// DÜZƏLİŞ: 'translations' importu tamamilə silindi.
 
 function Navbar() {
-  // 'setLanguage' və 'texts' birbaşa kontekstdən gəlir
   const { language, setLanguage, texts } = useLanguage();
 
   return (
@@ -22,7 +21,8 @@ function Navbar() {
         
         {/* Dil Dəyişmə Düymələri */}
         <div className="flex space-x-2">
-          {/* Artıq 'translations' obyektinə ehtiyac yoxdur */}
+          
+          {/* DÜZƏLİŞ: Dilləri birbaşa array-dən götürürük */}
           {['az', 'en', 'ru'].map((langKey) => (
             <button
               key={langKey}
