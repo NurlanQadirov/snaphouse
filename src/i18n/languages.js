@@ -26,14 +26,14 @@ const enTranslations = {
   },
   menu: {
     categories: [
-      { key: "nonAlcohol", name: "Non-Alcohol" },
+      { key: "nonAlcohol", name: "Non-Alcohol Cocktails" },
       { key: "lemonade", name: "Lemonade" },
       { key: "softDrinks", name: "Soft Drinks" },
       { key: "iceTea", name: "Homemade Ice Tea" },
       { key: "cocktails", name: "Cocktails" },
       { key: "shots", name: "Shot Cocktails" },
-      { key: "shotSets", name: "Shot Sets (x6)" },
-      { key: "signature", name: "Signature" },
+      { key: "shotSets", name: "Snap Shot Sets (x6)" },
+      { key: "signature", name: "Signature Cocktail" },
       { key: "appetizers", name: "Appetizers" },
       { key: "silverSet", name: "Silver Set Alcohol" },
       { key: "goldSet", name: "Gold Set Alcohol" },
@@ -49,10 +49,10 @@ const enTranslations = {
     ],
     menuData: {
       nonAlcohol: [
-        { id: "na1", name: "Virgin Mojito", price: "7 AZN", image: IMG_URL(338), description: "Refreshing mint and lime, without the alcohol.", ingredients: ["Mint", "Lime", "Sugar", "Soda"], isRecommended: true, prepTime: "5 min" },
+        { id: "na1", name: "Virgin Mojito", price: "6 AZN", image: IMG_URL(338), description: "Refreshing mint and lime, without the alcohol.", ingredients: ["Mint", "Lime", "Sugar", "Soda"], isRecommended: true, prepTime: "5 min" },
         { id: "na2", name: "Blue Lagoon", price: "7 AZN", image: IMG_URL(933), description: "A vibrant blue citrus delight.", ingredients: ["Blue Curaçao Syrup", "Lemonade", "Sprite"], isRecommended: false, prepTime: "3 min" },
         { id: "na3", name: "Lavender Sparkle", price: "6 AZN", image: IMG_URL(128), description: "Elegant floral and citrus notes.", ingredients: ["Lavender Syrup", "Lemon Juice", "Soda"], isRecommended: true, prepTime: "5 min" },
-        { id: "na4", name: "Berry Blossom", price: "7 AZN", image: IMG_URL(641), description: "A sweet mix of summer berries.", ingredients: ["Mixed Berries", "Cranberry Juice", "Soda"], isRecommended: false, prepTime: "5 min" },
+        { id: "na4", name: "Cherry Blossom", price: "7 AZN", image: IMG_URL(641), description: "A sweet mix of summer berries.", ingredients: ["Mixed Berries", "Cranberry Juice", "Soda"], isRecommended: false, prepTime: "5 min" },
         { id: "na5", name: "Berry Mojito", price: "8 AZN", image: IMG_URL(642), description: "Classic mojito with a berry twist.", ingredients: ["Berries", "Mint", "Lime", "Soda"], isRecommended: false, prepTime: "5 min" },
         { id: "na6", name: "Tropical Sunrise", price: "8 AZN", image: IMG_URL(158), description: "A taste of the tropics.", ingredients: ["Orange Juice", "Pineapple Juice", "Grenadine"], isRecommended: false, prepTime: "3 min" },
         { id: "na7", name: "Virgin Colada", price: "8 AZN", image: IMG_URL(219), description: "Creamy coconut and pineapple.", ingredients: ["Pineapple Juice", "Coconut Cream"], isRecommended: false, prepTime: "5 min" },
@@ -63,16 +63,17 @@ const enTranslations = {
         { id: "l3", name: "Mango", price: "6 AZN", image: IMG_URL(127), description: "Tropical mango in a refreshing lemonade.", ingredients: ["Lemon", "Mango Puree", "Sugar"], isRecommended: false, prepTime: "5 min" },
         { id: "l4", name: "Peach", price: "6 AZN", image: IMG_URL(128), description: "Sweet and mellow peach flavor.", ingredients: ["Lemon", "Peach Puree", "Sugar"], isRecommended: false, prepTime: "5 min" },
         { id: "l5", name: "Bubble Gum", price: "6 AZN", image: IMG_URL(129), description: "A fun and nostalgic flavor.", ingredients: ["Lemon", "Bubble Gum Syrup"], isRecommended: false, prepTime: "5 min" },
-        { id: "l6", name: "Pineapple", price: "6 AZN", image: IMG_URL(130), description: "Exotic and tangy.", ingredients: ["Lemon", "Pineapple"], isRecommended: false, prepTime: "5 min" },
-        { id: "l7", name: "Special", price: "9 AZN", image: IMG_URL(131), description: "Our head bartender's secret mix.", ingredients: ["Lemon", "Secret Ingredients"], isRecommended: true, prepTime: "5 min" },
+        { id: "l6", name: "Pear", price: "6 AZN", image: IMG_URL(130), description: "Exotic and tangy.", ingredients: ["Lemon", "Pear"], isRecommended: false, prepTime: "5 min" },
+        { id: "l7", name: "Pineapple", price: "6 AZN", image: IMG_URL(131), description: "Exotic and tangy.", ingredients: ["Lemon", "Pineapple"], isRecommended: false, prepTime: "5 min" },
+        { id: "l8", name: "Special", price: "9 AZN", image: IMG_URL(132), description: "Our head bartender's secret mix.", ingredients: ["Lemon", "Secret Ingredients"], isRecommended: true, prepTime: "5 min" },
       ],
       softDrinks: [
         { id: "sd1", name: "Cola 330 ML", price: "4 AZN", image: IMG_URL(135), description: "Classic Coca-Cola.", ingredients: ["Cola"], isRecommended: false, prepTime: "1 min" },
         { id: "sd2", name: "Cola Zero 330 ML", price: "4 AZN", image: IMG_URL(136), description: "Classic taste, zero sugar.", ingredients: ["Cola Zero"], isRecommended: false, prepTime: "1 min" },
-        { id: "sd3", name: "Fanta", price: "4 AZN", image: IMG_URL(137), description: "Orange soda.", ingredients: ["Fanta"], isRecommended: false, prepTime: "1 min" },
-        { id: "sd4", name: "Sprite", price: "4 AZN", image: IMG_URL(138), description: "Lemon-lime soda.", ingredients: ["Sprite"], isRecommended: false, prepTime: "1 min" },
-        { id: "sd5", name: "Redbull", price: "7 AZN", image: IMG_URL(139), description: "Energy drink.", ingredients: ["Redbull"], isRecommended: false, prepTime: "1min" },
-        { id: "sd6", name: "Tonic", price: "3 AZN", image: IMG_URL(140), description: "Tonic water.", ingredients: ["Tonic"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd3", name: "Sprite", price: "4 AZN", image: IMG_URL(138), description: "Lemon-lime soda.", ingredients: ["Sprite"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd4", name: "Fanta", price: "4 AZN", image: IMG_URL(137), description: "Orange soda.", ingredients: ["Fanta"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd5", name: "Redbull", price: "7 AZN", image: IMG_URL(139), description: "Energy drink.", ingredients: ["Redbull"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd6", name: "Tonic", price: "4 AZN", image: IMG_URL(140), description: "Tonic water.", ingredients: ["Tonic"], isRecommended: false, prepTime: "1 min" },
         { id: "sd7", name: "Fruit Juice", price: "3 AZN", image: IMG_URL(141), description: "Assorted fruit juices.", ingredients: ["Juice"], isRecommended: false, prepTime: "1 min" },
         { id: "sd8", name: "Water", price: "3 AZN", image: IMG_URL(142), description: "Still or sparkling water.", ingredients: ["Water"], isRecommended: false, prepTime: "1 min" },
       ],
@@ -96,8 +97,8 @@ const enTranslations = {
         { id: "c9", name: "Long Beach", price: "14 AZN", image: IMG_URL(202), description: "A Long Island with a cranberry twist.", ingredients: ["Vodka", "Gin", "Tequila", "Rum", "Cranberry"], isRecommended: false, prepTime: "7 min" },
         { id: "c10", name: "Espresso Martini", price: "13 AZN", image: IMG_URL(203), description: "The ultimate pick-me-up.", ingredients: ["Vodka", "Kahlua", "Espresso"], isRecommended: true, prepTime: "7 min" },
         { id: "c11", name: "Gin Tonic", price: "11 AZN", image: IMG_URL(204), description: "Classic, simple, refreshing.", ingredients: ["Gin", "Tonic Water"], isRecommended: false, prepTime: "3 min" },
-        { id: "c12", name: "Vodka Tonic", price: "11 AZN", image: IMG_URL(292), description: "Crisp and clean.", ingredients: ["Vodka", "Tonic Water"], isRecommended: false, prepTime: "3 min" },
-        { id: "c13", name: "Negroni", price: "13 AZN", image: IMG_URL(318), description: "Perfectly balanced bitter, sweet, and strong.", ingredients: ["Gin", "Campari", "Vermouth"], isRecommended: false, prepTime: "5 min" },
+        { id: "c12", name: "Vodka Tonic", price: "11 AZN", image: IMG_URL(292), description: "Crisp and clean.", ingredients: ["Vodka", "Tonic Water"], isRecommended: false, prepTime: "3min" },
+        { id: "c13", name: "Negroni", price: "14 AZN", image: IMG_URL(318), description: "Perfectly balanced bitter, sweet, and strong.", ingredients: ["Gin", "Campari", "Vermouth"], isRecommended: false, prepTime: "5 min" },
         { id: "c14", name: "Aperol Spritz", price: "15 AZN", image: IMG_URL(769), description: "The iconic Italian aperitif.", ingredients: ["Aperol", "Prosecco", "Soda"], isRecommended: true, prepTime: "5 min" },
         { id: "c15", name: "Cuba Libre", price: "11 AZN", image: IMG_URL(102), description: "Rum and Coke with a lime wedge.", ingredients: ["Rum", "Coke", "Lime"], isRecommended: false, prepTime: "3 min" },
         { id: "c16", name: "Mojito", price: "12 AZN", image: IMG_URL(106), description: "A refreshing Cuban classic.", ingredients: ["Rum", "Mint", "Lime", "Soda"], isRecommended: false, prepTime: "5 min" },
@@ -107,52 +108,53 @@ const enTranslations = {
         { id: "sh1", name: "B-52", price: "11 AZN", image: IMG_URL(111), description: "A layered shot of Kahlua, Baileys, and Cointreau.", ingredients: ["Kahlua", "Baileys", "Cointreau"], isRecommended: true, prepTime: "3 min" },
         { id: "sh2", name: "Hiroshima", price: "10 AZN", image: IMG_URL(112), description: "A visually impressive and strong shot.", ingredients: ["Sambuca", "Baileys", "Grenadine"], isRecommended: false, prepTime: "3 min" },
         { id: "sh3", name: "Org*sm Shot", price: "8 AZN", image: IMG_URL(113), description: "Creamy and delicious.", ingredients: ["Kahlua", "Amaretto", "Baileys"], isRecommended: false, prepTime: "3 min" },
-        { id: "sh4", name: "Rene's Kiss", price: "7 AZN", image: IMG_URL(114), description: "A sweet and fruity shot.", ingredients: ["Peach Schnapps", "Vodka", "Grenadine"], isRecommended: false, prepTime: "3 min" },
+        { id: "sh4", name: "French Kiss", price: "7 AZN", image: IMG_URL(114), description: "A sweet and fruity shot.", ingredients: ["Peach Schnapps", "Vodka", "Grenadine"], isRecommended: false, prepTime: "3 min" },
         { id: "sh5", name: "Blue Kamikaze (x6)", price: "15 AZN", image: IMG_URL(115), description: "A set of vibrant blue shots.", ingredients: ["Vodka", "Blue Curaçao", "Lime Juice"], isRecommended: false, prepTime: "5 min" },
       ],
       shotSets: [
         { id: "ss1", name: "Snap Shot", price: "16 AZN", image: IMG_URL(116), description: "A signature set of six shots.", ingredients: ["House Special Mix"], isRecommended: true, prepTime: "5 min" },
-        { id: "ss2", name: "B-52 Shot", price: "14 AZN", image: IMG_URL(111), description: "A set of six classic B-52s.", ingredients: ["Kahlua", "Baileys", "Cointreau"], isRecommended: false, prepTime: "5 min" },
+        { id: "ss2", name: "Streak Shot", price: "14 AZN", image: IMG_URL(111), description: "A set of six classic B-52s.", ingredients: ["Kahlua", "Baileys", "Cointreau"], isRecommended: false, prepTime: "5 min" },
         { id: "ss3", name: "Bitmoji Shot", price: "15 AZN", image: IMG_URL(117), description: "A fun and colorful set.", ingredients: ["Vodka", "Fruity Liqueurs"], isRecommended: false, prepTime: "5 min" },
         { id: "ss4", name: "Flash Shot", price: "14 AZN", image: IMG_URL(118), description: "A quick and strong set.", ingredients: ["Tequila", "Tabasco"], isRecommended: false, prepTime: "5 min" },
         { id: "ss5", name: "Ghost Shot", price: "13 AZN", image: IMG_URL(119), description: "A smooth and creamy set.", ingredients: ["Baileys", "Sambuca"], isRecommended: false, prepTime: "5 min" },
       ],
       signature: [
-        { id: "sig1", name: "Storm Sip", price: "11 AZN", image: IMG_URL(120), description: "Our dark and mysterious signature.", ingredients: ["Dark Rum", "Ginger Beer", "Lime"], isRecommended: true, prepTime: "7 min" },
+        { id: "sig1", name: "Story Sip", price: "11 AZN", image: IMG_URL(120), description: "Our dark and mysterious signature.", ingredients: ["Dark Rum", "Ginger Beer", "Lime"], isRecommended: true, prepTime: "7 min" },
         { id: "sig2", name: "Snap Map", price: "11 AZN", image: IMG_URL(121), description: "A journey of flavors.", ingredients: ["Gin", "Elderflower", "Grapefruit"], isRecommended: true, prepTime: "7 min" },
-        { id: "sig3", name: "Last Guest", price: "12 AZN", image: IMG_URL(122), description: "The perfect end to the night.", ingredients: ["Whiskey", "Honey", "Lemon"], isRecommended: false, prepTime: "5 min" },
+        { id: "sig3", name: "Lens Twist", price: "13 AZN", image: IMG_URL(122), description: "The perfect end to the night.", ingredients: ["Whiskey", "Honey", "Lemon"], isRecommended: false, prepTime: "5 min" },
         { id: "sig4", name: "Spotlight", price: "12 AZN", image: IMG_URL(123), description: "All eyes on this one.", ingredients: ["Vodka", "Passion Fruit", "Champagne"], isRecommended: false, prepTime: "7 min" },
         { id: "sig5", name: "Snap+", price: "15 AZN", image: IMG_URL(124), description: "The ultimate Snap House experience.", ingredients: ["Premium Spirits", "Secret Mix"], isRecommended: true, prepTime: "10 min" },
       ],
       appetizers: [
         { id: "ap1", name: "Noxud", price: "5 AZN", image: IMG_URL(210), description: "Boiled chickpeas, lightly salted.", ingredients: ["Chickpeas", "Salt"], isRecommended: false, prepTime: "5 min" },
-        { id: "ap2", name: "Puste Qizartma", price: "6 AZN", image: IMG_URL(211), description: "Fried pistachios.", ingredients: ["Pistachios"], isRecommended: false, prepTime: "5 min" },
+        { id: "ap2", name: "Noxud Qizartma", price: "6 AZN", image: IMG_URL(211), description: "Fried pistachios.", ingredients: ["Pistachios"], isRecommended: false, prepTime: "5 min" },
         { id: "ap3", name: "Sacaq Pendir", price: "6 AZN", image: IMG_URL(212), description: "String cheese.", ingredients: ["Cheese"], isRecommended: false, prepTime: "3 min" },
         { id: "ap4", name: "Sacaq Pendir (Qizardilmis)", price: "7 AZN", image: IMG_URL(213), description: "Fried string cheese.", ingredients: ["Cheese"], isRecommended: true, prepTime: "7 min" },
-        { id: "ap5", name: "Dusbere", price: "7 AZN", image: IMG_URL(214), description: "Fried local dumplings.", ingredients: ["Dough", "Meat"], isRecommended: false, prepTime: "10 min" },
-        { id: "ap6", name: "Boza (Qizardilmis)", price: "5 AZN", image: IMG_URL(215), description: "Fried... (Tərcümə lazımdır)", ingredients: ["Boza"], isRecommended: false, prepTime: "7 min" },
-        { id: "ap7", name: "Petene", price: "7 AZN", image: IMG_URL(216), description: "Smoked local fish.", ingredients: ["Fish"], isRecommended: false, prepTime: "5 min" },
-        { id: "ap8", name: "Xengel Qalgasi", price: "11 AZN", image: IMG_URL(217), description: "Crispy dough crisps.", ingredients: ["Dough"], isRecommended: false, prepTime: "10 min" },
+        { id: "ap5", name: "Dusbere", price: "6 AZN", image: IMG_URL(214), description: "Fried local dumplings.", ingredients: ["Dough", "Meat"], isRecommended: false, prepTime: "10 min" },
+        { id: "ap6", name: "Bogaz (Qizardilmis)", price: "5 AZN", image: IMG_URL(215), description: "Fried... (Tərcümə lazımdır)", ingredients: ["Boza"], isRecommended: false, prepTime: "7 min" },
+        { id: "ap7", name: "Petene", price: "6 AZN", image: IMG_URL(216), description: "Smoked local fish.", ingredients: ["Fish"], isRecommended: false, prepTime: "5 min" },
+        { id: "ap8", name: "Kalmar Halqasi", price: "11 AZN", image: IMG_URL(217), description: "Crispy dough crisps.", ingredients: ["Dough"], isRecommended: false, prepTime: "10 min" },
         { id: "ap9", name: "Kartof Fri", price: "5 AZN", image: IMG_URL(218), description: "French fries.", ingredients: ["Potato", "Ketchup", "Mayo"], isRecommended: false, prepTime: "7 min" },
-        { id: "ap10", name: "Sacaq Calgasi", price: "5 AZN", image: IMG_URL(220), description: "Crispy cheese strips.", ingredients: ["Cheese"], isRecommended: false, prepTime: "7 min" },
+        { id: "ap10", name: "Sogan Halqasi", price: "5 AZN", image: IMG_URL(220), description: "Crispy cheese strips.", ingredients: ["Cheese"], isRecommended: false, prepTime: "7 min" },
         { id: "ap11", name: "Puste Antep", price: "8 AZN", image: IMG_URL(221), description: "Antep pistachios.", ingredients: ["Pistachios"], isRecommended: false, prepTime: "3 min" },
         { id: "ap12", name: "Pendir Cubuqlari", price: "10 AZN", image: IMG_URL(222), description: "Cheese sticks.", ingredients: ["Cheese", "Breadcrumbs"], isRecommended: true, prepTime: "8 min" },
-        { id: "ap13", name: "Qarisiq Tende", price: "9 AZN", image: IMG_URL(223), description: "Mixed snacks.", ingredients: ["Mixed", "Snacks"], isRecommended: false, prepTime: "5 min" },
+        { id: "ap13", name: "BBQ Sousda Qanad", price: "9 AZN", image: IMG_URL(223), description: "Mixed snacks.", ingredients: ["Mixed", "Snacks"], isRecommended: false, prepTime: "5 min" },
         { id: "ap14", name: "Toyuq Popkorn", price: "10 AZN", image: IMG_URL(224), description: "Popcorn chicken.", ingredients: ["Chicken", "Breadcrumbs"], isRecommended: true, prepTime: "10 min" },
         { id: "ap15", name: "Gobelek Cipsi", price: "9 AZN", image: IMG_URL(225), description: "Mushroom chips.", ingredients: ["Mushroom"], isRecommended: false, prepTime: "8 min" },
-        { id: "ap16", name: "Nuggets", price: "8 AZN", image: IMG_URL(226), description: "Chicken nuggets.", ingredients: ["Chicken"], isRecommended: false, prepTime: "8 min" },
+        { id: "ap16", name: "Nagets", price: "9 AZN", image: IMG_URL(226), description: "Chicken nuggets.", ingredients: ["Chicken"], isRecommended: false, prepTime: "8 min" },
         { id: "ap17", name: "Toyuq Burger", price: "11 AZN", image: IMG_URL(227), description: "Chicken burger.", ingredients: ["Chicken", "Bun", "Salad"], isRecommended: false, prepTime: "12 min" },
-        { id: "ap18", name: "Et Burger", price: "14 AZN", image: IMG_URL(228), description: "Beef burger.", ingredients: ["Beef", "Bun", "Salad"], isRecommended: true, prepTime: "12 min" },
+        { id: "ap18", name: "Et Burger", price: "13 AZN", image: IMG_URL(228), description: "Beef burger.", ingredients: ["Beef", "Bun", "Salad"], isRecommended: true, prepTime: "12 min" },
         { id: "ap19", name: "Cizburger", price: "14 AZN", image: IMG_URL(229), description: "Cheeseburger.", ingredients: ["Beef", "Cheese", "Bun", "Salad"], isRecommended: false, prepTime: "12 min" },
-        { id: "ap20", name: "Qelyanalti", price: "14 AZN", image: IMG_URL(230), description: "Snack platter for shisha.", ingredients: ["Mixed", "Snacks"], isRecommended: true, prepTime: "10 min" },
+        { id: "ap20", name: "Club Sandvic", price: "14 AZN", image: IMG_URL(230), description: "Snack platter for shisha.", ingredients: ["Mixed", "Snacks"], isRecommended: true, prepTime: "10 min" },
         { id: "ap21", name: "Pendir Assorti", price: "12 AZN", image: IMG_URL(231), description: "Assorted cheese platter.", ingredients: ["Cheese", "Grapes", "Nuts"], isRecommended: false, prepTime: "10 min" },
         { id: "ap22", name: "Zeytun", price: "9 AZN", image: IMG_URL(232), description: "Olive platter.", ingredients: ["Olives"], isRecommended: false, prepTime: "5 min" },
       ],
       wine: [
-        { id: "w1", name: "Meyseri Maxmeri Red Dry", price: "8 / 40 AZN", image: IMG_URL(233), description: "Local red dry wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
-        { id: "w2", name: "Meyseri Cenesi Rose", price: "8 / 35 AZN", image: IMG_URL(234), description: "Local rose wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
-        { id: "w3", name: "Savalan Merlor Cabernet", price: "7 / 30 AZN", image: IMG_URL(235), description: "Local red blend.", ingredients: ["Wine"], isRecommended: true, prepTime: "3 min" },
-        { id: "w4", name: "Savalan Chardonnay", price: "7 / 30 AZN", image: IMG_URL(236), description: "Local white wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
+        { id: "w1", name: "Meysəri Məxməri Red Dry", price: "8/40 AZN", image: IMG_URL(233), description: "Local red dry wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
+        { id: "w2", name: "Meysəri Bulluri White", price: "8/35 AZN", image: IMG_URL(234), description: "Local rose wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
+        { id: "w3", name: "Meysəri Sanam Rose", price: "8/35 AZN", image: IMG_URL(235), description: "Local red blend.", ingredients: ["Wine"], isRecommended: true, prepTime: "3 min" },
+        { id: "w4", name: "Savalan Merlot Cabernet", price: "7/30 AZN", image: IMG_URL(236), description: "Local white wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
+        { id: "w5", name: "Savalan Chardonnay", price: "7/30 AZN", image: IMG_URL(237), description: "Local white wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
       ],
       silverSet: [
         { id: "siv1", name: "Jameson (0,5 L) + 3 Redbull", price: "110 AZN", image: IMG_URL(237), description: "Jameson set.", ingredients: ["Jameson", "Redbull"], isRecommended: false, prepTime: "5 min" },
@@ -165,9 +167,9 @@ const enTranslations = {
         { id: "g1", name: "Jameson (1 L) + 4 Redbull + Fruit Plate", price: "170 AZN", image: IMG_URL(242), description: "Large Jameson set.", ingredients: ["Jameson", "Redbull", "Fruit"], isRecommended: false, prepTime: "5 min" },
         { id: "g2", name: "Chivas Regal 12 (1 L) + 4 Redbull + Fruit Plate", price: "190 AZN", image: IMG_URL(243), description: "Large Chivas 12 set.", ingredients: ["Chivas 12", "Redbull", "Fruit"], isRecommended: true, prepTime: "5 min" },
         { id: "g3", name: "Jagermeister (1 L) + 4 Redbull + Fruit Plate", price: "130 AZN", image: IMG_URL(244), description: "Large Jagermeister set.", ingredients: ["Jagermeister", "Redbull", "Fruit"], isRecommended: false, prepTime: "5 min" },
-        { id: "g4", name: "Olmeca (1 L) + 4 Tonic + Fruit Plate", price: "140 AZN", image: IMG_URL(245), description: "Large Olmeca set.", ingredients: ["Olmeca", "Tonic", "Fruit"], isRecommended: false, prepTime: "5 min" },
-        { id: "g5", name: "Olmeca (1 L) + Fruit Plate", price: "130 AZN", image: IMG_URL(246), description: "Large Olmeca set.", ingredients: ["Olmeca", "Fruit"], isRecommended: false, prepTime: "5 min" },
-        { id: "g6", name: "Finlandia (1 L) + Fruit Plate", price: "130 AZN", image: IMG_URL(247), description: "Large Finlandia set.", ingredients: ["Finlandia", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "g4", name: "Gin Gordon's (1 L) + 4 Tonic + Fruit Plate", price: "140 AZN", image: IMG_URL(245), description: "Large Olmeca set.", ingredients: ["Olmeca", "Tonic", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "g5", name: "Olmeca (1 L) + Fruit Plate", price: "140 AZN", image: IMG_URL(246), description: "Large Olmeca set.", ingredients: ["Olmeca", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "g6", name: "Finlandia (1 LT) + Fruit Plate", price: "130 AZN", image: IMG_URL(247), description: "Large Finlandia set.", ingredients: ["Finlandia", "Fruit"], isRecommended: false, prepTime: "5 min" },
       ],
       liqueur: [
         { id: "liq1", name: "Jagermeister", price: "6 AZN", image: IMG_URL(248), description: "German herbal liqueur.", ingredients: ["Liqueur"], isRecommended: false, prepTime: "3 min" },
@@ -182,50 +184,40 @@ const enTranslations = {
       ],
       vodka: [
         { id: "v1", name: "Finlandia", price: "7 AZN", image: IMG_URL(255), description: "Smooth Finnish vodka.", ingredients: ["Vodka"], isRecommended: false, prepTime: "3 min" },
-        { id: "v2", name: "Absolut", price: "7 AZN", image: IMG_URL(256), description: "Swedish vodka.", ingredients: ["Vodka"], isRecommended: false, prepTime: "3 min" },
+        { id: "v2", name: "Absolute", price: "7 AZN", image: IMG_URL(256), description: "Swedish vodka.", ingredients: ["Vodka"], isRecommended: false, prepTime: "3 min" },
       ],
       aperitives: [
         { id: "apv1", name: "Martini Bianco", price: "7 AZN", image: IMG_URL(257), description: "Sweet white vermouth.", ingredients: ["Aperitive"], isRecommended: false, prepTime: "3 min" },
-        { id: "apv2", name: "Martini Rosso", price: "7 AZN", image: IMG_URL(258), description: "Sweet red vermouth.", ingredients: ["Aperitive"], isRecommended: false, prepTime: "3min" },
-        { id: "apv3", name: "Campari", price: "7 AZN", image: IMG_URL(259), description: "Bitter Italian aperitif.", ingredients: ["Aperitive"], isRecommended: false, prepTime: "3 min" },
-        { id: "apv4", name: "Aperol", price: "9 AZN", image: IMG_URL(260), description: "Sweet and bitter orange aperitif.", ingredients: ["Aperitive"], isRecommended: true, prepTime: "3 min" },
+        { id: "apv2", name: "Martini Rosso", price: "7 AZN", image: IMG_URL(258), description: "Sweet red vermouth.", ingredients: ["Aperitive"], isRecommended: false, prepTime: "3 min" },
+        { id: "apv3", name: "Aperol", price: "9 AZN", image: IMG_URL(260), description: "Sweet and bitter orange aperitif.", ingredients: ["Aperitive"], isRecommended: true, prepTime: "3 min" },
       ],
       raki: [
-        { id: "r1", name: "Yeni Raki", price: "7 AZN", image: IMG_URL(261), description: "Traditional Turkish spirit.", ingredients: ["Raki"], isRecommended: false, prepTime: "3 min" },
+        { id: "r1", name: "Yeni Raki", price: "7 AZN", image: IMG_URL(261), description: "Traditional Turkish spirit.", ingredients: ["Raki"], isRecommended: false, prepTime: "3min" },
       ],
       tequila: [
         { id: "t1", name: "Olmeca", price: "6 AZN", image: IMG_URL(262), description: "Olmeca Tequila (Silver/Gold).", ingredients: ["Tequila"], isRecommended: false, prepTime: "3 min" },
-        { id: "t2", name: "Sierra", price: "7 AZN", image: IMG_URL(263), description: "Sierra Tequila (Silver/Gold).", ingredients: ["Tequila"], isRecommended: false, prepTime: "3 min" }, // DÜZƏLİŞ BURADA EDİLDİ
+        { id: "t2", name: "Sierra", price: "5 AZN", image: IMG_URL(263), description: "Sierra Tequila (Silver/Gold).", ingredients: ["Tequila"], isRecommended: false, prepTime: "3 min" },
       ],
       whiskey: [
         { id: "wh1", name: "Jameson", price: "8 AZN", image: IMG_URL(264), description: "Irish whiskey.", ingredients: ["Whiskey"], isRecommended: false, prepTime: "3 min" },
-        { id: "wh2", name: "Jack Daniels", price: "9 AZN", image: IMG_URL(265), description: "Tennessee whiskey.", ingredients: ["Whiskey"], isRecommended: false, prepTime: "3 min" },
+        { id: "wh2", name: "Jack Daniel's", price: "9 AZN", image: IMG_URL(265), description: "Tennessee whiskey.", ingredients: ["Whiskey"], isRecommended: false, prepTime: "3 min" },
         { id: "wh3", name: "Chivas Regal 12", price: "9 AZN", image: IMG_URL(266), description: "12-year blended Scotch.", ingredients: ["Whiskey"], isRecommended: false, prepTime: "3 min" },
         { id: "wh4", name: "Monkey Shoulder", price: "10 AZN", image: IMG_URL(267), description: "Blended malt Scotch.", ingredients: ["Whiskey"], isRecommended: true, prepTime: "3 min" },
       ],
       beer: [
         { id: "b1", name: "Xirdalan", price: "5 AZN", image: IMG_URL(268), description: "Local Azerbaijani beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
-        { id: "b2", name: "Xirdalan Non Filter", price: "5 AZN", image: IMG_URL(269), description: "Local unfiltered beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1min" },
-        { id: "b3", name: "Corona", price: "9 AZN", image: IMG_URL(270), description: "Mexican lager.", ingredients: ["Beer"], isRecommended: true, prepTime: "1min" },
-        { id: "b4", name: "Efes", price: "8 AZN", image: IMG_URL(271), description: "Turkish pilsner.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
-        { id: "b5", name: "Efes Draft", price: "4 AZN", image: IMG_URL(272), description: "Turkish draft beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
+        { id: "b2", name: "Xirdalan Non Filter", price: "5 AZN", image: IMG_URL(269), description: "Local unfiltered beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
+        { id: "b3", name: "Corona", price: "9 AZN", image: IMG_URL(270), description: "Mexican lager.", ingredients: ["Beer"], isRecommended: true, prepTime: "1 min" },
+        { id: "b4", name: "Efes Zero", price: "4 AZN", image: IMG_URL(271), description: "Turkish pilsner.", ingredients: ["Beer"], isRecommended: false, prepTime: "1min" },
+        { id: "b5", name: "Efes Draft", price: "7 AZN", image: IMG_URL(272), description: "Turkish draft beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
         { id: "b6", name: "Miller", price: "8 AZN", image: IMG_URL(273), description: "American lager.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
-      ],
-      // Bu kateqoriyalar menyuda yox idi, lakin əlavə etmişdik.
-      // Sən qərar verə bilərsən ki, saxlayaq ya yox. Hələlik saxlayıram.
-      mainDishes: [
-        { id: "m1", name: "Filet Mignon 'Snap'", description: "8oz center-cut tenderloin, served with truffle mashed potatoes and a red wine reduction.", price: "55 AZN", image: IMG_URL(695), ingredients: ["Beef Tenderloin", "Truffle", "Potatoes", "Red Wine"], isRecommended: true, prepTime: "25 min" },
-        { id: "m2", name: "Seared Salmon", description: "Pan-seared salmon with a crispy skin, on a bed of quinoa and seasonal vegetables.", price: "42 AZN", image: IMG_URL(495), ingredients: ["Salmon Fillet", "Quinoa", "Asparagus", "Lemon Butter Sauce"], isRecommended: false, prepTime: "20 min" },
-      ],
-      desserts: [
-        { id: "d1", name: "Gold Leaf Tiramisu", description: "Classic Italian tiramisu dusted with cocoa and adorned with edible 24k gold leaf.", price: "25 AZN", image: IMG_URL(575), ingredients: ["Ladyfingers", "Mascarpone", "Espresso", "24k Gold Leaf"], isRecommended: true, prepTime: "15 min" },
       ],
     }
   }
 };
 
 
-// --- 2. AZƏRBAYCAN DİLİ ---
+// --- 2. AZƏRBAYCAN DİLİ (SƏNİN TƏRCÜMƏLƏRİN) ---
 const azTranslations = {
   nav: { az: "AZ", en: "EN", ru: "RU" },
   preloader: { title: "Snap House" },
@@ -248,13 +240,13 @@ const azTranslations = {
   },
   menu: {
     categories: [
-      { key: "nonAlcohol", name: "Alkoqolsuz" },
+      { key: "nonAlcohol", name: "Alkoqolsuz Kokteyllər" },
       { key: "lemonade", name: "Limonad" },
       { key: "softDrinks", name: "Sərin İçkilər" },
       { key: "iceTea", name: "Ev Yapımı Buzlu Çay" },
       { key: "cocktails", name: "Kokteyllər" },
       { key: "shots", name: "Shot Kokteyllər" },
-      { key: "shotSets", name: "Shot Setlər (x6)" },
+      { key: "shotSets", name: "Snap Shot Setlər (x6)" },
       { key: "signature", name: "İmza Kokteylləri" },
       { key: "appetizers", name: "Qəlyanaltılar" },
       { key: "silverSet", name: "Silver Set (Alkoqol)" },
@@ -269,44 +261,114 @@ const azTranslations = {
       { key: "beer", name: "Butulka Pivəsi" },
       { key: "wine", name: "Şərab" },
     ],
-    // Məhsul adları və təsvirləri tərcümə edilməlidir
-    // Hələlik ingiliscənin kopyasıdır
+    // Məhsullar (Sənin tərcümələrinlə)
     menuData: {
-      nonAlcohol: enTranslations.menu.menuData.nonAlcohol.map(item => ({
-        ...item,
-        name: item.name.replace("Virgin", "Alkoqolsuz"), // Sadə bir nümunə
-        description: "Alkoqolsuz, sərinləşdirici nanə və laym.", // Tərcümə edilməlidir
-        ingredients: item.ingredients // Tərcümə edilməlidir
-      })),
-      // BÜTÜN QALAN KATEQORİYALAR TƏRCÜMƏ EDİLMƏLİDİR
-      // HƏLƏLİK EN KOPYASINI İSTİFADƏ EDİRƏM
-      lemonade: [...enTranslations.menu.menuData.lemonade],
-      softDrinks: [...enTranslations.menu.menuData.softDrinks],
-      iceTea: [...enTranslations.menu.menuData.iceTea],
-      cocktails: [...enTranslations.menu.menuData.cocktails],
-      shots: [...enTranslations.menu.menuData.shots],
-      shotSets: [...enTranslations.menu.menuData.shotSets],
-      signature: [...enTranslations.menu.menuData.signature],
-      appetizers: [...enTranslations.menu.menuData.appetizers],
-      silverSet: [...enTranslations.menu.menuData.silverSet],
-      goldSet: [...enTranslations.menu.menuData.goldSet],
-      liqueur: [...enTranslations.menu.menuData.liqueur],
-      gin: [...enTranslations.menu.menuData.gin],
-      vodka: [...enTranslations.menu.menuData.vodka],
-      aperitives: [...enTranslations.menu.menuData.aperitives],
-      raki: [...enTranslations.menu.menuData.raki],
-      tequila: [...enTranslations.menu.menuData.tequila],
-      whiskey: [...enTranslations.menu.menuData.whiskey],
-      beer: [...enTranslations.menu.menuData.beer],
-      wine: [...enTranslations.menu.menuData.wine],
-      mainDishes: [...enTranslations.menu.menuData.mainDishes],
-      desserts: [...enTranslations.menu.menuData.desserts],
+      nonAlcohol: enTranslations.menu.menuData.nonAlcohol.map((item, i) => {
+        const names = ["Alkoqolsuz Mojito", "Mavi Laqun", "Lavanda Parıltısı", "Gilas Çiçəyi", "Giləmeyvəli Mojito", "Tropik Günəşi", "Alkoqolsuz Kolada"];
+        const prices = ["6", "7", "6", "7", "8", "8", "8"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      lemonade: enTranslations.menu.menuData.lemonade.map((item, i) => {
+        const names = ["Klassik", "Çiyələk", "Manqo", "Şaftalı", "Saqqız", "Armud", "Ananas", "Xüsusi"];
+        const prices = ["5", "6", "6", "6", "6", "6", "6", "9"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      softDrinks: enTranslations.menu.menuData.softDrinks.map((item, i) => {
+        const names = ["Kola 330 ML", "Kola Sıfır 330 ML", "Sprayt", "Fanta", "Redbul", "Tonik", "Meyvə Şirəsi", "Su"];
+        const prices = ["4", "4", "4", "4", "7", "4", "3", "3"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      iceTea: enTranslations.menu.menuData.iceTea.map((item, i) => {
+        const names = ["Giləmeyvə", "Şaftalı", "Manqo", "Passiflora", "Albalı", "Alma"];
+        const prices = ["7", "7", "7", "7", "7", "7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      cocktails: enTranslations.menu.menuData.cocktails.map((item, i) => {
+        const names = ["Lonq Ayland", "Viski Sour", "Marqarita", "Tekila Günəşi", "Seks Çimərlikdə", "Amaretto Sour", "Kosmopolitan", "Lonq Ayland Enerji", "Lonq Biç", "Espresso Martini", "Cin Tonik", "Vodka Tonik", "Neqroni", "Aperol Sprits", "Kuba Libre", "Mojito", "P*rnstar Martini"];
+        const prices = ["14", "13", "11", "12", "12", "13", "12", "16", "14", "13", "11", "11", "14", "15", "11", "12", "13"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      shots: enTranslations.menu.menuData.shots.map((item, i) => {
+        const names = ["B-52", "Hiroşima", "Orq*zm Shot", "Fransız Öpüşü", "Mavi Kamikaze (x6)"];
+        const prices = ["11", "10", "8", "7", "15"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      shotSets: enTranslations.menu.menuData.shotSets.map((item, i) => {
+        const names = ["Snap Shot", "Strayk Shot", "Bitmoji Shot", "Fleş Shot", "Xəyalət Shot"];
+        const prices = ["16", "14", "15", "14", "13"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      signature: enTranslations.menu.menuData.signature.map((item, i) => {
+        const names = ["Story Sip", "Snap Map", "Lens Twist", "Spotlayt", "Snap+"];
+        const prices = ["11", "11", "13", "12", "15"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      appetizers: enTranslations.menu.menuData.appetizers.map((item, i) => {
+        const names = ["Noxud", "Noxud Qızartma", "Sacaq Pendir", "Sacaq Pendir (Qızardılmış)", "Düşbərə", "Boğaz (Qızardılmış)", "Pətənə", "Kalmar Halqası", "Kartof Fri", "Soğan Halqası", "Püstə Antep", "Pendir Çubuqları", "BBQ Sousda Qanad", "Toyuq Popkorn", "Göbələk Çipsi", "Nagets", "Toyuq Burger", "Ət Burger", "Çizburger", "Klub Sandviç", "Pendir Assorti", "Zeytun"];
+        const prices = ["5", "6", "6", "7", "6", "5", "6", "11", "5", "5", "8", "10", "9", "10", "9", "9", "11", "13", "14", "14", "12", "9"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      wine: enTranslations.menu.menuData.wine.map((item, i) => {
+        const names = ["Meysəri Məxməri Qırmızı Quru", "Meysəri Bülluru Ağ", "Meysəri Sanam Roze", "Savalan Merlot Kaberne", "Savalan Şardonne"];
+        const prices = ["8/40", "8/35", "8/35", "7/30", "7/30"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      silverSet: enTranslations.menu.menuData.silverSet.map((item, i) => {
+        const names = ["Ceymson (0,5 L) + 3 Redbul", "Çivas Regal 12 (0,5 L) + 3 Redbul", "Olmeka (0,5 L) + Meyvə Tabağı", "Finlandiya (0,5 L) + Meyvə Tabağı", "Yagermayster (0,5 L) + 3 Redbul"];
+        const prices = ["110", "120", "80", "70", "70"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      goldSet: enTranslations.menu.menuData.goldSet.map((item, i) => {
+        const names = ["Ceymson (1 L) + 4 Redbul + Meyvə Tabağı", "Çivas Regal 12 (1 L) + 4 Redbul + Meyvə Tabağı", "Yagermayster (1 L) + 4 Redbul + Meyvə Tabağı", "Cin Qordon (1 L) + 4 Tonik + Meyvə Tabağı", "Olmeka (1 L) + Meyvə Tabağı", "Finlandiya (1 LT) + Meyvə Tabağı"];
+        const prices = ["170", "190", "130", "140", "140", "130"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      liqueur: enTranslations.menu.menuData.liqueur.map((item, i) => {
+        const names = ["Yagermayster", "Beylis", "Tripl Sek", "Sambuka", "Amaretto"];
+        const prices = ["6", "6", "7", "7", "7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      gin: enTranslations.menu.menuData.gin.map((item, i) => {
+        const names = ["Qordons", "Bombey Safir"];
+        const prices = ["7", "8"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      vodka: enTranslations.menu.menuData.vodka.map((item, i) => {
+        const names = ["Finlandiya", "Absolut"];
+        const prices = ["7", "7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      aperitives: enTranslations.menu.menuData.aperitives.map((item, i) => {
+        const names = ["Martini Byanko", "Martini Rosso", "Aperol"];
+        const prices = ["7", "7", "9"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      raki: enTranslations.menu.menuData.raki.map((item, i) => {
+        const names = ["Yeni Rakı"];
+        const prices = ["7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      tequila: enTranslations.menu.menuData.tequila.map((item, i) => {
+        const names = ["Olmeka", "Sierra"];
+        const prices = ["6", "5"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      whiskey: enTranslations.menu.menuData.whiskey.map((item, i) => {
+        const names = ["Ceymson", "Cek Deniels", "Çivas Regal 12", "Manki Şolder"];
+        const prices = ["8", "9", "9", "10"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
+      beer: enTranslations.menu.menuData.beer.map((item, i) => {
+        const names = ["Xırdalan", "Xırdalan Filtrsiz", "Korona", "Efes Sıfır", "Efes Draft", "Miller"];
+        const prices = ["5", "5", "9", "4", "7", "8"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Tərcümə edilməli təsvir...", ingredients: ["Tərcümə edilməli tərkib..."] };
+      }),
     }
   }
 };
 
 
-// --- 3. RUS DİLİ ---
+// --- 3. RUS DİLİ (SƏNİN TƏRCÜMƏLƏRİN) ---
 const ruTranslations = {
   nav: { az: "AZ", en: "EN", ru: "RU" },
   preloader: { title: "Snap House" },
@@ -329,18 +391,18 @@ const ruTranslations = {
   },
   menu: {
     categories: [
-      { key: "nonAlcohol", name: "Безалкогольные" },
-      { key: "lemonade", name: "Лимонады" },
+      { key: "nonAlcohol", name: "Безалкогольные Коктейли" },
+      { key: "lemonade", name: "Лимонад" },
       { key: "softDrinks", name: "Напитки" },
-      { key: "iceTea", name: "Холодный Чай" },
+      { key: "iceTea", name: "Домашний Холодный Чай" },
       { key: "cocktails", name: "Коктейли" },
-      { key: "shots", name: "Шоты" },
-      { key: "shotSets", name: "Сеты Шотов (x6)" },
-      { key: "signature", name: "Авторские" },
+      { key: "shots", name: "Шот Коктейли" },
+      { key: "shotSets", name: "Snap Шот Сеты (x6)" },
+      { key: "signature", name: "Авторские Коктейли" },
       { key: "appetizers", name: "Закуски" },
       { key: "silverSet", name: "Silver Set (Алкоголь)" },
       { key: "goldSet", name: "Gold Set (Алкоголь)" },
-      { key: "liqueur", name: "Ликер" },
+      { key: "liqueur", name: "Ликёр" },
       { key: "gin", name: "Джин" },
       { key: "vodka", name: "Водка" },
       { key: "aperitives", name: "Аперитивы" },
@@ -350,45 +412,115 @@ const ruTranslations = {
       { key: "beer", name: "Пиво (Бутылки)" },
       { key: "wine", name: "Вино" },
     ],
-    // Məhsul adları və təsvirləri tərcümə edilməlidir
-    // Hələlik ingiliscənin kopyasıdır
+    // Məhsullar (Sənin tərcümələrinlə)
     menuData: {
-      nonAlcohol: enTranslations.menu.menuData.nonAlcohol.map(item => ({
-        ...item,
-        name: item.name.replace("Virgin", "Безалкогольный"), // Sadə bir nümunə
-        description: "Освежающая мята и лайм, без алкоголя.", // Tərcümə edilməlidir
-        ingredients: item.ingredients // Tərcümə edilməlidir
-      })),
-      // BÜTÜN QALAN KATEQORİYALAR TƏRCÜMƏ EDİLMƏLİDİR
-      // HƏLƏLİK EN KOPYASINI İSTİFADƏ EDİRƏM
-      lemonade: [...enTranslations.menu.menuData.lemonade],
-      softDrinks: [...enTranslations.menu.menuData.softDrinks],
-      iceTea: [...enTranslations.menu.menuData.iceTea],
-      cocktails: [...enTranslations.menu.menuData.cocktails],
-      shots: [...enTranslations.menu.menuData.shots],
-      shotSets: [...enTranslations.menu.menuData.shotSets],
-      signature: [...enTranslations.menu.menuData.signature],
-      appetizers: [...enTranslations.menu.menuData.appetizers],
-      silverSet: [...enTranslations.menu.menuData.silverSet],
-      goldSet: [...enTranslations.menu.menuData.goldSet],
-      liqueur: [...enTranslations.menu.menuData.liqueur],
-      gin: [...enTranslations.menu.menuData.gin],
-      vodka: [...enTranslations.menu.menuData.vodka],
-      aperitives: [...enTranslations.menu.menuData.aperitives],
-      raki: [...enTranslations.menu.menuData.raki],
-      tequila: [...enTranslations.menu.menuData.tequila],
-      whiskey: [...enTranslations.menu.menuData.whiskey],
-      beer: [...enTranslations.menu.menuData.beer],
-      wine: [...enTranslations.menu.menuData.wine],
-      mainDishes: [...enTranslations.menu.menuData.mainDishes],
-      desserts: [...enTranslations.menu.menuData.desserts],
+      nonAlcohol: enTranslations.menu.menuData.nonAlcohol.map((item, i) => {
+        const names = ["Безалкогольный Мохито", "Голубая Лагуна", "Лавандовое Сияние", "Вишневый Цвет", "Ягодный Мохито", "Тропический Восход", "Безалкогольная Колада"];
+        const prices = ["6", "7", "6", "7", "8", "8", "8"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      lemonade: enTranslations.menu.menuData.lemonade.map((item, i) => {
+        const names = ["Классический", "Клубничный", "Манго", "Персиковый", "Баббл Гам", "Грушевый", "Ананасовый", "Специальный"];
+        const prices = ["5", "6", "6", "6", "6", "6", "6", "9"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      softDrinks: enTranslations.menu.menuData.softDrinks.map((item, i) => {
+        const names = ["Кола 330 МЛ", "Кола Зеро 330 МЛ", "Спрайт", "Фанта", "Редбул", "Тоник", "Фруктовый Сок", "Вода"];
+        const prices = ["4", "4", "4", "4", "7", "4", "3", "3"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      iceTea: enTranslations.menu.menuData.iceTea.map((item, i) => {
+        const names = ["Ягодный", "Персиковый", "Манго", "Маракуйя", "Вишневый", "Яблочный"];
+        const prices = ["7", "7", "7", "7", "7", "7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      cocktails: enTranslations.menu.menuData.cocktails.map((item, i) => {
+        const names = ["Лонг Айленд", "Виски Сауэр", "Маргарита", "Текила Санрайз", "Секс на Пляже", "Амаретто Сауэр", "Космополитан", "Лонг Айленд Энерджи", "Лонг Бич", "Эспрессо Мартини", "Джин Тоник", "Водка Тоник", "Негрони", "Апероль Шприц", "Куба Либре", "Мохито", "П*рнстар Мартини"];
+        const prices = ["14", "13", "11", "12", "12", "13", "12", "16", "14", "13", "11", "11", "14", "15", "11", "12", "13"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      shots: enTranslations.menu.menuData.shots.map((item, i) => {
+        const names = ["Б-52", "Хиросима", "Орг*зм Шот", "Французский Поцелуй", "Синий Камикадзе (x6)"];
+        const prices = ["11", "10", "8", "7", "15"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      shotSets: enTranslations.menu.menuData.shotSets.map((item, i) => {
+        const names = ["Snap Шот", "Страйк Шот", "Битмоджи Шот", "Флэш Шот", "Призрак Шот"];
+        const prices = ["16", "14", "15", "14", "13"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      signature: enTranslations.menu.menuData.signature.map((item, i) => {
+        const names = ["Стори Сип", "Snap Map", "Ленс Твист", "Спотлайт", "Snap+"];
+        const prices = ["11", "11", "13", "12", "15"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      appetizers: enTranslations.menu.menuData.appetizers.map((item, i) => {
+        const names = ["Нут", "Жареный Нут", "Сыр Косичка", "Жареный Сыр Косичка", "Дюшбяря", "Жареные... (Boğaz?)", "Петене (Копч. рыба)", "Кольца Кальмара", "Картофель Фри", "Луковые Кольца", "Фисташки Антеп", "Сырные Палочки", "Крылышки Барбекю", "Куриный Попкорн", "Грибные Чипсы", "Наггетсы", "Куриный Бургер", "Мясной Бургер", "Чизбургер", "Клаб Сэндвич", "Сырное Ассорти", "Оливки"];
+        const prices = ["5", "6", "6", "7", "6", "5", "6", "11", "5", "5", "8", "10", "9", "10", "9", "9", "11", "13", "14", "14", "12", "9"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      wine: enTranslations.menu.menuData.wine.map((item, i) => {
+        const names = ["Мейсери Мехмери Красное Сухое", "Мейсери Буллури Белое", "Мейсери Санам Розе", "Савалан Мерло Каберне", "Савалан Шардоне"];
+        const prices = ["8/40", "8/35", "8/35", "7/30", "7/30"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      silverSet: enTranslations.menu.menuData.silverSet.map((item, i) => {
+        const names = ["Джеймсон (0,5 Л) + 3 Редбулл", "Чивас Регал 12 (0,5 Л) + 3 Редбулл", "Олмека (0,5 Л) + Фруктовая Тарелка", "Финляндия (0,5 Л) + Фруктовая Тарелка", "Егермейстер (0,5 Л) + 3 Редбулл"];
+        const prices = ["110", "120", "80", "70", "70"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      goldSet: enTranslations.menu.menuData.goldSet.map((item, i) => {
+        const names = ["Джеймсон (1 Л) + 4 Редбулл + Фрукты", "Чивас Регал 12 (1 Л) + 4 Редбулл + Фрукты", "Егермейстер (1 Л) + 4 Редбулл + Фрукты", "Джин Гордонс (1 Л) + 4 Тоник + Фрукты", "Олмека (1 Л) + Фруктовая Тарелка", "Финляндия (1 ЛТ) + Фруктовая Тарелка"];
+        const prices = ["170", "190", "130", "140", "140", "130"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      liqueur: enTranslations.menu.menuData.liqueur.map((item, i) => {
+        const names = ["Егермейстер", "Бейлис", "Трипл Сек", "Самбука", "Амаретто"];
+        const prices = ["6", "6", "7", "7", "7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      gin: enTranslations.menu.menuData.gin.map((item, i) => {
+        const names = ["Гордонс", "Бомбей Сапфир"];
+        const prices = ["7", "8"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      vodka: enTranslations.menu.menuData.vodka.map((item, i) => {
+        const names = ["Финляндия", "Абсолют"];
+        const prices = ["7", "7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      aperitives: enTranslations.menu.menuData.aperitives.map((item, i) => {
+        const names = ["Мартини Бьянко", "Мартини Россо", "Апероль"];
+        const prices = ["7", "7", "9"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      raki: enTranslations.menu.menuData.raki.map((item, i) => {
+        const names = ["Ени Раки"];
+        const prices = ["7"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      tequila: enTranslations.menu.menuData.tequila.map((item, i) => {
+        const names = ["Олмека", "Сиерра"];
+        const prices = ["6", "5"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      whiskey: enTranslations.menu.menuData.whiskey.map((item, i) => {
+        const names = ["Джеймсон", "Джек Дэниэлс", "Чивас Регал 12", "Манки Шолдер"];
+        const prices = ["8", "9", "9", "10"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
+      beer: enTranslations.menu.menuData.beer.map((item, i) => {
+        const names = ["Хырдалан", "Хырдалан Нефильтрованное", "Корона", "Эфес Зеро", "Эфес Драфт", "Миллер"];
+        const prices = ["5", "5", "9", "4", "7", "8"];
+        return { ...item, name: names[i], price: `${prices[i]} AZN`, description: "Описание для перевода...", ingredients: ["Ингредиенты для перевода..."] };
+      }),
     }
   }
 };
 
 
-// DÜZƏLİŞ: İndi 'translations' obyektini bu sabitlərdən istifadə edərək yaradırıq.
-// Bu, 'ReferenceError' xətasını həll edir.
+// --- 4. YEKUN EKSPORT ---
+// Bu, 'ReferenceError' xətasını aradan qaldırır.
 export const translations = {
   en: enTranslations,
   az: azTranslations,
