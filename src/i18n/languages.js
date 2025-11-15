@@ -1,0 +1,396 @@
+// src/i18n/languages.js
+
+// Təsadüfi şəkil ID-ləri (Menyu üçün)
+const IMG_URL = (id) => `https://picsum.photos/id/${id}/400/400`;
+
+// --- 1. İNGİLİS DİLİ (ƏSAS) ---
+const enTranslations = {
+  nav: { az: "AZ", en: "EN", ru: "RU" },
+  preloader: { title: "Snap House" },
+  specialsBanner: {
+    title: "Chef's Special",
+    itemName: "Filet Mignon 'Snap'",
+  },
+  modal: {
+    chefPick: "Chef's Pick",
+    prepTime: "Prep. Time",
+    ingredients: "Ingredients",
+  },
+  footer: {
+    slogan: "Experience culinary art in every snapshot.",
+    address: "Address",
+    call: "Call",
+    instagram: "Instagram",
+    scan: "Scan the QR to view anytime",
+    rights: `© ${new Date().getFullYear()} Snap House. All Rights Reserved.`,
+  },
+  menu: {
+    categories: [
+      { key: "nonAlcohol", name: "Non-Alcohol" },
+      { key: "lemonade", name: "Lemonade" },
+      { key: "softDrinks", name: "Soft Drinks" },
+      { key: "iceTea", name: "Homemade Ice Tea" },
+      { key: "cocktails", name: "Cocktails" },
+      { key: "shots", name: "Shot Cocktails" },
+      { key: "shotSets", name: "Shot Sets (x6)" },
+      { key: "signature", name: "Signature" },
+      { key: "appetizers", name: "Appetizers" },
+      { key: "silverSet", name: "Silver Set Alcohol" },
+      { key: "goldSet", name: "Gold Set Alcohol" },
+      { key: "liqueur", name: "Liqueur" },
+      { key: "gin", name: "Gin" },
+      { key: "vodka", name: "Vodka" },
+      { key: "aperitives", name: "Aperitives" },
+      { key: "raki", name: "Raki" },
+      { key: "tequila", name: "Tequila" },
+      { key: "whiskey", name: "Whiskey" },
+      { key: "beer", name: "Bottles Beer" },
+      { key: "wine", name: "Wine" },
+    ],
+    menuData: {
+      nonAlcohol: [
+        { id: "na1", name: "Virgin Mojito", price: "7 AZN", image: IMG_URL(338), description: "Refreshing mint and lime, without the alcohol.", ingredients: ["Mint", "Lime", "Sugar", "Soda"], isRecommended: true, prepTime: "5 min" },
+        { id: "na2", name: "Blue Lagoon", price: "7 AZN", image: IMG_URL(933), description: "A vibrant blue citrus delight.", ingredients: ["Blue Curaçao Syrup", "Lemonade", "Sprite"], isRecommended: false, prepTime: "3 min" },
+        { id: "na3", name: "Lavender Sparkle", price: "6 AZN", image: IMG_URL(128), description: "Elegant floral and citrus notes.", ingredients: ["Lavender Syrup", "Lemon Juice", "Soda"], isRecommended: true, prepTime: "5 min" },
+        { id: "na4", name: "Berry Blossom", price: "7 AZN", image: IMG_URL(641), description: "A sweet mix of summer berries.", ingredients: ["Mixed Berries", "Cranberry Juice", "Soda"], isRecommended: false, prepTime: "5 min" },
+        { id: "na5", name: "Berry Mojito", price: "8 AZN", image: IMG_URL(642), description: "Classic mojito with a berry twist.", ingredients: ["Berries", "Mint", "Lime", "Soda"], isRecommended: false, prepTime: "5 min" },
+        { id: "na6", name: "Tropical Sunrise", price: "8 AZN", image: IMG_URL(158), description: "A taste of the tropics.", ingredients: ["Orange Juice", "Pineapple Juice", "Grenadine"], isRecommended: false, prepTime: "3 min" },
+        { id: "na7", name: "Virgin Colada", price: "8 AZN", image: IMG_URL(219), description: "Creamy coconut and pineapple.", ingredients: ["Pineapple Juice", "Coconut Cream"], isRecommended: false, prepTime: "5 min" },
+      ],
+      lemonade: [
+        { id: "l1", name: "Classic", price: "5 AZN", image: IMG_URL(125), description: "Sweet, sour, and perfectly refreshing.", ingredients: ["Lemon", "Sugar", "Water"], isRecommended: true, prepTime: "3 min" },
+        { id: "l2", name: "Strawberry", price: "6 AZN", image: IMG_URL(126), description: "Classic lemonade with a sweet strawberry twist.", ingredients: ["Lemon", "Strawberry", "Sugar"], isRecommended: false, prepTime: "5 min" },
+        { id: "l3", name: "Mango", price: "6 AZN", image: IMG_URL(127), description: "Tropical mango in a refreshing lemonade.", ingredients: ["Lemon", "Mango Puree", "Sugar"], isRecommended: false, prepTime: "5 min" },
+        { id: "l4", name: "Peach", price: "6 AZN", image: IMG_URL(128), description: "Sweet and mellow peach flavor.", ingredients: ["Lemon", "Peach Puree", "Sugar"], isRecommended: false, prepTime: "5 min" },
+        { id: "l5", name: "Bubble Gum", price: "6 AZN", image: IMG_URL(129), description: "A fun and nostalgic flavor.", ingredients: ["Lemon", "Bubble Gum Syrup"], isRecommended: false, prepTime: "5 min" },
+        { id: "l6", name: "Pineapple", price: "6 AZN", image: IMG_URL(130), description: "Exotic and tangy.", ingredients: ["Lemon", "Pineapple"], isRecommended: false, prepTime: "5 min" },
+        { id: "l7", name: "Special", price: "9 AZN", image: IMG_URL(131), description: "Our head bartender's secret mix.", ingredients: ["Lemon", "Secret Ingredients"], isRecommended: true, prepTime: "5 min" },
+      ],
+      softDrinks: [
+        { id: "sd1", name: "Cola 330 ML", price: "4 AZN", image: IMG_URL(135), description: "Classic Coca-Cola.", ingredients: ["Cola"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd2", name: "Cola Zero 330 ML", price: "4 AZN", image: IMG_URL(136), description: "Classic taste, zero sugar.", ingredients: ["Cola Zero"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd3", name: "Fanta", price: "4 AZN", image: IMG_URL(137), description: "Orange soda.", ingredients: ["Fanta"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd4", name: "Sprite", price: "4 AZN", image: IMG_URL(138), description: "Lemon-lime soda.", ingredients: ["Sprite"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd5", name: "Redbull", price: "7 AZN", image: IMG_URL(139), description: "Energy drink.", ingredients: ["Redbull"], isRecommended: false, prepTime: "1min" },
+        { id: "sd6", name: "Tonic", price: "3 AZN", image: IMG_URL(140), description: "Tonic water.", ingredients: ["Tonic"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd7", name: "Fruit Juice", price: "3 AZN", image: IMG_URL(141), description: "Assorted fruit juices.", ingredients: ["Juice"], isRecommended: false, prepTime: "1 min" },
+        { id: "sd8", name: "Water", price: "3 AZN", image: IMG_URL(142), description: "Still or sparkling water.", ingredients: ["Water"], isRecommended: false, prepTime: "1 min" },
+      ],
+      iceTea: [
+        { id: "it1", name: "Berry", price: "7 AZN", image: IMG_URL(132), description: "A refreshing iced tea with mixed berries.", ingredients: ["Black Tea", "Mixed Berries"], isRecommended: true, prepTime: "5 min" },
+        { id: "it2", name: "Peach", price: "7 AZN", image: IMG_URL(133), description: "The classic, sweet peach iced tea.", ingredients: ["Black Tea", "Peach"], isRecommended: false, prepTime: "5 min" },
+        { id: "it3", name: "Mango", price: "7 AZN", image: IMG_URL(134), description: "Tropical mango iced tea.", ingredients: ["Black Tea", "Mango"], isRecommended: false, prepTime: "5 min" },
+        { id: "it4", name: "Passion Fruit", price: "7 AZN", image: IMG_URL(143), description: "Exotic passion fruit iced tea.", ingredients: ["Black Tea", "Passion Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "it5", name: "Cherry", price: "7 AZN", image: IMG_URL(144), description: "Sweet cherry iced tea.", ingredients: ["Black Tea", "Cherry"], isRecommended: false, prepTime: "5 min" },
+        { id: "it6", name: "Apple", price: "7 AZN", image: IMG_URL(145), description: "Crisp apple iced tea.", ingredients: ["Black Tea", "Apple"], isRecommended: false, prepTime: "5 min" },
+      ],
+      cocktails: [
+        { id: "c1", name: "Long Island", price: "14 AZN", image: IMG_URL(158), description: "A potent mix of spirits, sweet and sour.", ingredients: ["Vodka", "Gin", "Tequila", "Rum", "Coke"], isRecommended: true, prepTime: "7 min" },
+        { id: "c2", name: "Whiskey Sour", price: "13 AZN", image: IMG_URL(355), description: "Classic balance of whiskey, lemon, and sugar.", ingredients: ["Whiskey", "Lemon Juice", "Sugar", "Egg White"], isRecommended: false, prepTime: "5 min" },
+        { id: "c3", name: "Margarita", price: "11 AZN", image: IMG_URL(450), description: "Tequila, lime, and triple sec. A fiesta.", ingredients: ["Tequila", "Lime Juice", "Cointreau"], isRecommended: true, prepTime: "5 min" },
+        { id: "c4", name: "Tequila Sunrise", price: "12 AZN", image: IMG_URL(495), description: "Looks like a sunrise, tastes like heaven.", ingredients: ["Tequila", "Orange Juice", "Grenadine"], isRecommended: false, prepTime: "3 min" },
+        { id: "c5", name: "Sex on the Beach", price: "12 AZN", image: IMG_URL(575), description: "A fruity and popular highball.", ingredients: ["Vodka", "Peach Schnapps", "Orange", "Cranberry"], isRecommended: false, prepTime: "5 min" },
+        { id: "c6", name: "Amaretto Sour", price: "13 AZN", image: IMG_URL(695), description: "Sweet almond and sour lemon.", ingredients: ["Amaretto", "Lemon Juice"], isRecommended: false, prepTime: "5 min" },
+        { id: "c7", name: "Cosmopolitan", price: "12 AZN", image: IMG_URL(945), description: "Elegant, crisp, and citrusy.", ingredients: ["Vodka", "Cointreau", "Lime", "Cranberry"], isRecommended: false, prepTime: "5 min" },
+        { id: "c8", name: "Long Island Energy", price: "16 AZN", image: IMG_URL(201), description: "The classic, supercharged with energy drink.", ingredients: ["Vodka", "Gin", "Tequila", "Rum", "Redbull"], isRecommended: false, prepTime: "7 min" },
+        { id: "c9", name: "Long Beach", price: "14 AZN", image: IMG_URL(202), description: "A Long Island with a cranberry twist.", ingredients: ["Vodka", "Gin", "Tequila", "Rum", "Cranberry"], isRecommended: false, prepTime: "7 min" },
+        { id: "c10", name: "Espresso Martini", price: "13 AZN", image: IMG_URL(203), description: "The ultimate pick-me-up.", ingredients: ["Vodka", "Kahlua", "Espresso"], isRecommended: true, prepTime: "7 min" },
+        { id: "c11", name: "Gin Tonic", price: "11 AZN", image: IMG_URL(204), description: "Classic, simple, refreshing.", ingredients: ["Gin", "Tonic Water"], isRecommended: false, prepTime: "3 min" },
+        { id: "c12", name: "Vodka Tonic", price: "11 AZN", image: IMG_URL(292), description: "Crisp and clean.", ingredients: ["Vodka", "Tonic Water"], isRecommended: false, prepTime: "3 min" },
+        { id: "c13", name: "Negroni", price: "13 AZN", image: IMG_URL(318), description: "Perfectly balanced bitter, sweet, and strong.", ingredients: ["Gin", "Campari", "Vermouth"], isRecommended: false, prepTime: "5 min" },
+        { id: "c14", name: "Aperol Spritz", price: "15 AZN", image: IMG_URL(769), description: "The iconic Italian aperitif.", ingredients: ["Aperol", "Prosecco", "Soda"], isRecommended: true, prepTime: "5 min" },
+        { id: "c15", name: "Cuba Libre", price: "11 AZN", image: IMG_URL(102), description: "Rum and Coke with a lime wedge.", ingredients: ["Rum", "Coke", "Lime"], isRecommended: false, prepTime: "3 min" },
+        { id: "c16", name: "Mojito", price: "12 AZN", image: IMG_URL(106), description: "A refreshing Cuban classic.", ingredients: ["Rum", "Mint", "Lime", "Soda"], isRecommended: false, prepTime: "5 min" },
+        { id: "c17", name: "P*rnstar Martini", price: "13 AZN", image: IMG_URL(30), description: "Passion fruit, vanilla, and vodka.", ingredients: ["Vodka", "Passion Fruit", "Vanilla"], isRecommended: false, prepTime: "7 min" },
+      ],
+      shots: [
+        { id: "sh1", name: "B-52", price: "11 AZN", image: IMG_URL(111), description: "A layered shot of Kahlua, Baileys, and Cointreau.", ingredients: ["Kahlua", "Baileys", "Cointreau"], isRecommended: true, prepTime: "3 min" },
+        { id: "sh2", name: "Hiroshima", price: "10 AZN", image: IMG_URL(112), description: "A visually impressive and strong shot.", ingredients: ["Sambuca", "Baileys", "Grenadine"], isRecommended: false, prepTime: "3 min" },
+        { id: "sh3", name: "Org*sm Shot", price: "8 AZN", image: IMG_URL(113), description: "Creamy and delicious.", ingredients: ["Kahlua", "Amaretto", "Baileys"], isRecommended: false, prepTime: "3 min" },
+        { id: "sh4", name: "Rene's Kiss", price: "7 AZN", image: IMG_URL(114), description: "A sweet and fruity shot.", ingredients: ["Peach Schnapps", "Vodka", "Grenadine"], isRecommended: false, prepTime: "3 min" },
+        { id: "sh5", name: "Blue Kamikaze (x6)", price: "15 AZN", image: IMG_URL(115), description: "A set of vibrant blue shots.", ingredients: ["Vodka", "Blue Curaçao", "Lime Juice"], isRecommended: false, prepTime: "5 min" },
+      ],
+      shotSets: [
+        { id: "ss1", name: "Snap Shot", price: "16 AZN", image: IMG_URL(116), description: "A signature set of six shots.", ingredients: ["House Special Mix"], isRecommended: true, prepTime: "5 min" },
+        { id: "ss2", name: "B-52 Shot", price: "14 AZN", image: IMG_URL(111), description: "A set of six classic B-52s.", ingredients: ["Kahlua", "Baileys", "Cointreau"], isRecommended: false, prepTime: "5 min" },
+        { id: "ss3", name: "Bitmoji Shot", price: "15 AZN", image: IMG_URL(117), description: "A fun and colorful set.", ingredients: ["Vodka", "Fruity Liqueurs"], isRecommended: false, prepTime: "5 min" },
+        { id: "ss4", name: "Flash Shot", price: "14 AZN", image: IMG_URL(118), description: "A quick and strong set.", ingredients: ["Tequila", "Tabasco"], isRecommended: false, prepTime: "5 min" },
+        { id: "ss5", name: "Ghost Shot", price: "13 AZN", image: IMG_URL(119), description: "A smooth and creamy set.", ingredients: ["Baileys", "Sambuca"], isRecommended: false, prepTime: "5 min" },
+      ],
+      signature: [
+        { id: "sig1", name: "Storm Sip", price: "11 AZN", image: IMG_URL(120), description: "Our dark and mysterious signature.", ingredients: ["Dark Rum", "Ginger Beer", "Lime"], isRecommended: true, prepTime: "7 min" },
+        { id: "sig2", name: "Snap Map", price: "11 AZN", image: IMG_URL(121), description: "A journey of flavors.", ingredients: ["Gin", "Elderflower", "Grapefruit"], isRecommended: true, prepTime: "7 min" },
+        { id: "sig3", name: "Last Guest", price: "12 AZN", image: IMG_URL(122), description: "The perfect end to the night.", ingredients: ["Whiskey", "Honey", "Lemon"], isRecommended: false, prepTime: "5 min" },
+        { id: "sig4", name: "Spotlight", price: "12 AZN", image: IMG_URL(123), description: "All eyes on this one.", ingredients: ["Vodka", "Passion Fruit", "Champagne"], isRecommended: false, prepTime: "7 min" },
+        { id: "sig5", name: "Snap+", price: "15 AZN", image: IMG_URL(124), description: "The ultimate Snap House experience.", ingredients: ["Premium Spirits", "Secret Mix"], isRecommended: true, prepTime: "10 min" },
+      ],
+      appetizers: [
+        { id: "ap1", name: "Noxud", price: "5 AZN", image: IMG_URL(210), description: "Boiled chickpeas, lightly salted.", ingredients: ["Chickpeas", "Salt"], isRecommended: false, prepTime: "5 min" },
+        { id: "ap2", name: "Puste Qizartma", price: "6 AZN", image: IMG_URL(211), description: "Fried pistachios.", ingredients: ["Pistachios"], isRecommended: false, prepTime: "5 min" },
+        { id: "ap3", name: "Sacaq Pendir", price: "6 AZN", image: IMG_URL(212), description: "String cheese.", ingredients: ["Cheese"], isRecommended: false, prepTime: "3 min" },
+        { id: "ap4", name: "Sacaq Pendir (Qizardilmis)", price: "7 AZN", image: IMG_URL(213), description: "Fried string cheese.", ingredients: ["Cheese"], isRecommended: true, prepTime: "7 min" },
+        { id: "ap5", name: "Dusbere", price: "7 AZN", image: IMG_URL(214), description: "Fried local dumplings.", ingredients: ["Dough", "Meat"], isRecommended: false, prepTime: "10 min" },
+        { id: "ap6", name: "Boza (Qizardilmis)", price: "5 AZN", image: IMG_URL(215), description: "Fried... (Tərcümə lazımdır)", ingredients: ["Boza"], isRecommended: false, prepTime: "7 min" },
+        { id: "ap7", name: "Petene", price: "7 AZN", image: IMG_URL(216), description: "Smoked local fish.", ingredients: ["Fish"], isRecommended: false, prepTime: "5 min" },
+        { id: "ap8", name: "Xengel Qalgasi", price: "11 AZN", image: IMG_URL(217), description: "Crispy dough crisps.", ingredients: ["Dough"], isRecommended: false, prepTime: "10 min" },
+        { id: "ap9", name: "Kartof Fri", price: "5 AZN", image: IMG_URL(218), description: "French fries.", ingredients: ["Potato", "Ketchup", "Mayo"], isRecommended: false, prepTime: "7 min" },
+        { id: "ap10", name: "Sacaq Calgasi", price: "5 AZN", image: IMG_URL(220), description: "Crispy cheese strips.", ingredients: ["Cheese"], isRecommended: false, prepTime: "7 min" },
+        { id: "ap11", name: "Puste Antep", price: "8 AZN", image: IMG_URL(221), description: "Antep pistachios.", ingredients: ["Pistachios"], isRecommended: false, prepTime: "3 min" },
+        { id: "ap12", name: "Pendir Cubuqlari", price: "10 AZN", image: IMG_URL(222), description: "Cheese sticks.", ingredients: ["Cheese", "Breadcrumbs"], isRecommended: true, prepTime: "8 min" },
+        { id: "ap13", name: "Qarisiq Tende", price: "9 AZN", image: IMG_URL(223), description: "Mixed snacks.", ingredients: ["Mixed", "Snacks"], isRecommended: false, prepTime: "5 min" },
+        { id: "ap14", name: "Toyuq Popkorn", price: "10 AZN", image: IMG_URL(224), description: "Popcorn chicken.", ingredients: ["Chicken", "Breadcrumbs"], isRecommended: true, prepTime: "10 min" },
+        { id: "ap15", name: "Gobelek Cipsi", price: "9 AZN", image: IMG_URL(225), description: "Mushroom chips.", ingredients: ["Mushroom"], isRecommended: false, prepTime: "8 min" },
+        { id: "ap16", name: "Nuggets", price: "8 AZN", image: IMG_URL(226), description: "Chicken nuggets.", ingredients: ["Chicken"], isRecommended: false, prepTime: "8 min" },
+        { id: "ap17", name: "Toyuq Burger", price: "11 AZN", image: IMG_URL(227), description: "Chicken burger.", ingredients: ["Chicken", "Bun", "Salad"], isRecommended: false, prepTime: "12 min" },
+        { id: "ap18", name: "Et Burger", price: "14 AZN", image: IMG_URL(228), description: "Beef burger.", ingredients: ["Beef", "Bun", "Salad"], isRecommended: true, prepTime: "12 min" },
+        { id: "ap19", name: "Cizburger", price: "14 AZN", image: IMG_URL(229), description: "Cheeseburger.", ingredients: ["Beef", "Cheese", "Bun", "Salad"], isRecommended: false, prepTime: "12 min" },
+        { id: "ap20", name: "Qelyanalti", price: "14 AZN", image: IMG_URL(230), description: "Snack platter for shisha.", ingredients: ["Mixed", "Snacks"], isRecommended: true, prepTime: "10 min" },
+        { id: "ap21", name: "Pendir Assorti", price: "12 AZN", image: IMG_URL(231), description: "Assorted cheese platter.", ingredients: ["Cheese", "Grapes", "Nuts"], isRecommended: false, prepTime: "10 min" },
+        { id: "ap22", name: "Zeytun", price: "9 AZN", image: IMG_URL(232), description: "Olive platter.", ingredients: ["Olives"], isRecommended: false, prepTime: "5 min" },
+      ],
+      wine: [
+        { id: "w1", name: "Meyseri Maxmeri Red Dry", price: "8 / 40 AZN", image: IMG_URL(233), description: "Local red dry wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
+        { id: "w2", name: "Meyseri Cenesi Rose", price: "8 / 35 AZN", image: IMG_URL(234), description: "Local rose wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
+        { id: "w3", name: "Savalan Merlor Cabernet", price: "7 / 30 AZN", image: IMG_URL(235), description: "Local red blend.", ingredients: ["Wine"], isRecommended: true, prepTime: "3 min" },
+        { id: "w4", name: "Savalan Chardonnay", price: "7 / 30 AZN", image: IMG_URL(236), description: "Local white wine.", ingredients: ["Wine"], isRecommended: false, prepTime: "3 min" },
+      ],
+      silverSet: [
+        { id: "siv1", name: "Jameson (0,5 L) + 3 Redbull", price: "110 AZN", image: IMG_URL(237), description: "Jameson set.", ingredients: ["Jameson", "Redbull"], isRecommended: false, prepTime: "5 min" },
+        { id: "siv2", name: "Chivas Regal 12 (0,5 L) + 3 Redbull", price: "120 AZN", image: IMG_URL(238), description: "Chivas 12 set.", ingredients: ["Chivas 12", "Redbull"], isRecommended: true, prepTime: "5 min" },
+        { id: "siv3", name: "Olmeca (0,5 L) + Fruit Plate", price: "80 AZN", image: IMG_URL(239), description: "Olmeca tequila set.", ingredients: ["Olmeca", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "siv4", name: "Finlandia (0,5 L) + Fruit Plate", price: "70 AZN", image: IMG_URL(240), description: "Finlandia vodka set.", ingredients: ["Finlandia", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "siv5", name: "Jagermeister (0,5 L) + 3 Redbull", price: "70 AZN", image: IMG_URL(241), description: "Jagermeister set.", ingredients: ["Jagermeister", "Redbull"], isRecommended: false, prepTime: "5 min" },
+      ],
+      goldSet: [
+        { id: "g1", name: "Jameson (1 L) + 4 Redbull + Fruit Plate", price: "170 AZN", image: IMG_URL(242), description: "Large Jameson set.", ingredients: ["Jameson", "Redbull", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "g2", name: "Chivas Regal 12 (1 L) + 4 Redbull + Fruit Plate", price: "190 AZN", image: IMG_URL(243), description: "Large Chivas 12 set.", ingredients: ["Chivas 12", "Redbull", "Fruit"], isRecommended: true, prepTime: "5 min" },
+        { id: "g3", name: "Jagermeister (1 L) + 4 Redbull + Fruit Plate", price: "130 AZN", image: IMG_URL(244), description: "Large Jagermeister set.", ingredients: ["Jagermeister", "Redbull", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "g4", name: "Olmeca (1 L) + 4 Tonic + Fruit Plate", price: "140 AZN", image: IMG_URL(245), description: "Large Olmeca set.", ingredients: ["Olmeca", "Tonic", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "g5", name: "Olmeca (1 L) + Fruit Plate", price: "130 AZN", image: IMG_URL(246), description: "Large Olmeca set.", ingredients: ["Olmeca", "Fruit"], isRecommended: false, prepTime: "5 min" },
+        { id: "g6", name: "Finlandia (1 L) + Fruit Plate", price: "130 AZN", image: IMG_URL(247), description: "Large Finlandia set.", ingredients: ["Finlandia", "Fruit"], isRecommended: false, prepTime: "5 min" },
+      ],
+      liqueur: [
+        { id: "liq1", name: "Jagermeister", price: "6 AZN", image: IMG_URL(248), description: "German herbal liqueur.", ingredients: ["Liqueur"], isRecommended: false, prepTime: "3 min" },
+        { id: "liq2", name: "Baileys", price: "6 AZN", image: IMG_URL(249), description: "Irish cream liqueur.", ingredients: ["Liqueur"], isRecommended: false, prepTime: "3 min" },
+        { id: "liq3", name: "Triple Sec", price: "7 AZN", image: IMG_URL(250), description: "Orange-flavored liqueur.", ingredients: ["Liqueur"], isRecommended: false, prepTime: "3 min" },
+        { id: "liq4", name: "Samuca", price: "7 AZN", image: IMG_URL(251), description: "Anise-flavored liqueur.", ingredients: ["Liqueur"], isRecommended: false, prepTime: "3 min" },
+        { id: "liq5", name: "Amaretto", price: "7 AZN", image: IMG_URL(252), description: "Almond-flavored liqueur.", ingredients: ["Liqueur"], isRecommended: false, prepTime: "3 min" },
+      ],
+      gin: [
+        { id: "gin1", name: "Gordon's", price: "7 AZN", image: IMG_URL(253), description: "Classic London dry gin.", ingredients: ["Gin"], isRecommended: false, prepTime: "3 min" },
+        { id: "gin2", name: "Bombay Sapphire", price: "8 AZN", image: IMG_URL(254), description: "Premium gin with botanicals.", ingredients: ["Gin"], isRecommended: true, prepTime: "3 min" },
+      ],
+      vodka: [
+        { id: "v1", name: "Finlandia", price: "7 AZN", image: IMG_URL(255), description: "Smooth Finnish vodka.", ingredients: ["Vodka"], isRecommended: false, prepTime: "3 min" },
+        { id: "v2", name: "Absolut", price: "7 AZN", image: IMG_URL(256), description: "Swedish vodka.", ingredients: ["Vodka"], isRecommended: false, prepTime: "3 min" },
+      ],
+      aperitives: [
+        { id: "apv1", name: "Martini Bianco", price: "7 AZN", image: IMG_URL(257), description: "Sweet white vermouth.", ingredients: ["Aperitive"], isRecommended: false, prepTime: "3 min" },
+        { id: "apv2", name: "Martini Rosso", price: "7 AZN", image: IMG_URL(258), description: "Sweet red vermouth.", ingredients: ["Aperitive"], isRecommended: false, prepTime: "3min" },
+        { id: "apv3", name: "Campari", price: "7 AZN", image: IMG_URL(259), description: "Bitter Italian aperitif.", ingredients: ["Aperitive"], isRecommended: false, prepTime: "3 min" },
+        { id: "apv4", name: "Aperol", price: "9 AZN", image: IMG_URL(260), description: "Sweet and bitter orange aperitif.", ingredients: ["Aperitive"], isRecommended: true, prepTime: "3 min" },
+      ],
+      raki: [
+        { id: "r1", name: "Yeni Raki", price: "7 AZN", image: IMG_URL(261), description: "Traditional Turkish spirit.", ingredients: ["Raki"], isRecommended: false, prepTime: "3 min" },
+      ],
+      tequila: [
+        { id: "t1", name: "Olmeca", price: "6 AZN", image: IMG_URL(262), description: "Olmeca Tequila (Silver/Gold).", ingredients: ["Tequila"], isRecommended: false, prepTime: "3 min" },
+        { id: "t2", name: "Sierra", price: "7 AZN", image: IMG_URL(263), description: "Sierra Tequila (Silver/Gold).", ingredients: ["Tequila"], isRecommended: false, prepTime: "3 min" }, // DÜZƏLİŞ BURADA EDİLDİ
+      ],
+      whiskey: [
+        { id: "wh1", name: "Jameson", price: "8 AZN", image: IMG_URL(264), description: "Irish whiskey.", ingredients: ["Whiskey"], isRecommended: false, prepTime: "3 min" },
+        { id: "wh2", name: "Jack Daniels", price: "9 AZN", image: IMG_URL(265), description: "Tennessee whiskey.", ingredients: ["Whiskey"], isRecommended: false, prepTime: "3 min" },
+        { id: "wh3", name: "Chivas Regal 12", price: "9 AZN", image: IMG_URL(266), description: "12-year blended Scotch.", ingredients: ["Whiskey"], isRecommended: false, prepTime: "3 min" },
+        { id: "wh4", name: "Monkey Shoulder", price: "10 AZN", image: IMG_URL(267), description: "Blended malt Scotch.", ingredients: ["Whiskey"], isRecommended: true, prepTime: "3 min" },
+      ],
+      beer: [
+        { id: "b1", name: "Xirdalan", price: "5 AZN", image: IMG_URL(268), description: "Local Azerbaijani beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
+        { id: "b2", name: "Xirdalan Non Filter", price: "5 AZN", image: IMG_URL(269), description: "Local unfiltered beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1min" },
+        { id: "b3", name: "Corona", price: "9 AZN", image: IMG_URL(270), description: "Mexican lager.", ingredients: ["Beer"], isRecommended: true, prepTime: "1min" },
+        { id: "b4", name: "Efes", price: "8 AZN", image: IMG_URL(271), description: "Turkish pilsner.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
+        { id: "b5", name: "Efes Draft", price: "4 AZN", image: IMG_URL(272), description: "Turkish draft beer.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
+        { id: "b6", name: "Miller", price: "8 AZN", image: IMG_URL(273), description: "American lager.", ingredients: ["Beer"], isRecommended: false, prepTime: "1 min" },
+      ],
+      // Bu kateqoriyalar menyuda yox idi, lakin əlavə etmişdik.
+      // Sən qərar verə bilərsən ki, saxlayaq ya yox. Hələlik saxlayıram.
+      mainDishes: [
+        { id: "m1", name: "Filet Mignon 'Snap'", description: "8oz center-cut tenderloin, served with truffle mashed potatoes and a red wine reduction.", price: "55 AZN", image: IMG_URL(695), ingredients: ["Beef Tenderloin", "Truffle", "Potatoes", "Red Wine"], isRecommended: true, prepTime: "25 min" },
+        { id: "m2", name: "Seared Salmon", description: "Pan-seared salmon with a crispy skin, on a bed of quinoa and seasonal vegetables.", price: "42 AZN", image: IMG_URL(495), ingredients: ["Salmon Fillet", "Quinoa", "Asparagus", "Lemon Butter Sauce"], isRecommended: false, prepTime: "20 min" },
+      ],
+      desserts: [
+        { id: "d1", name: "Gold Leaf Tiramisu", description: "Classic Italian tiramisu dusted with cocoa and adorned with edible 24k gold leaf.", price: "25 AZN", image: IMG_URL(575), ingredients: ["Ladyfingers", "Mascarpone", "Espresso", "24k Gold Leaf"], isRecommended: true, prepTime: "15 min" },
+      ],
+    }
+  }
+};
+
+
+// --- 2. AZƏRBAYCAN DİLİ ---
+const azTranslations = {
+  nav: { az: "AZ", en: "EN", ru: "RU" },
+  preloader: { title: "Snap House" },
+  specialsBanner: {
+    title: "Şefin Seçimi",
+    itemName: "Filet Mignon 'Snap'",
+  },
+  modal: {
+    chefPick: "Şefin Seçimi",
+    prepTime: "Hazırlanma Vaxtı",
+    ingredients: "Tərkibi",
+  },
+  footer: {
+    slogan: "Hər 'snap'da kulinariya sənətini kəşf edin.",
+    address: "Ünvan",
+    call: "Zəng et",
+    instagram: "Instagram",
+    scan: "İstənilən zaman baxmaq üçün QR-ı skan edin",
+    rights: `© ${new Date().getFullYear()} Snap House. Bütün hüquqlar qorunur.`,
+  },
+  menu: {
+    categories: [
+      { key: "nonAlcohol", name: "Alkoqolsuz" },
+      { key: "lemonade", name: "Limonad" },
+      { key: "softDrinks", name: "Sərin İçkilər" },
+      { key: "iceTea", name: "Ev Yapımı Buzlu Çay" },
+      { key: "cocktails", name: "Kokteyllər" },
+      { key: "shots", name: "Shot Kokteyllər" },
+      { key: "shotSets", name: "Shot Setlər (x6)" },
+      { key: "signature", name: "İmza Kokteylləri" },
+      { key: "appetizers", name: "Qəlyanaltılar" },
+      { key: "silverSet", name: "Silver Set (Alkoqol)" },
+      { key: "goldSet", name: "Gold Set (Alkoqol)" },
+      { key: "liqueur", name: "Likör" },
+      { key: "gin", name: "Cin" },
+      { key: "vodka", name: "Vodka" },
+      { key: "aperitives", name: "Aperitivlər" },
+      { key: "raki", name: "Rakı" },
+      { key: "tequila", name: "Tekila" },
+      { key: "whiskey", name: "Viski" },
+      { key: "beer", name: "Butulka Pivəsi" },
+      { key: "wine", name: "Şərab" },
+    ],
+    // Məhsul adları və təsvirləri tərcümə edilməlidir
+    // Hələlik ingiliscənin kopyasıdır
+    menuData: {
+      nonAlcohol: enTranslations.menu.menuData.nonAlcohol.map(item => ({
+        ...item,
+        name: item.name.replace("Virgin", "Alkoqolsuz"), // Sadə bir nümunə
+        description: "Alkoqolsuz, sərinləşdirici nanə və laym.", // Tərcümə edilməlidir
+        ingredients: item.ingredients // Tərcümə edilməlidir
+      })),
+      // BÜTÜN QALAN KATEQORİYALAR TƏRCÜMƏ EDİLMƏLİDİR
+      // HƏLƏLİK EN KOPYASINI İSTİFADƏ EDİRƏM
+      lemonade: [...enTranslations.menu.menuData.lemonade],
+      softDrinks: [...enTranslations.menu.menuData.softDrinks],
+      iceTea: [...enTranslations.menu.menuData.iceTea],
+      cocktails: [...enTranslations.menu.menuData.cocktails],
+      shots: [...enTranslations.menu.menuData.shots],
+      shotSets: [...enTranslations.menu.menuData.shotSets],
+      signature: [...enTranslations.menu.menuData.signature],
+      appetizers: [...enTranslations.menu.menuData.appetizers],
+      silverSet: [...enTranslations.menu.menuData.silverSet],
+      goldSet: [...enTranslations.menu.menuData.goldSet],
+      liqueur: [...enTranslations.menu.menuData.liqueur],
+      gin: [...enTranslations.menu.menuData.gin],
+      vodka: [...enTranslations.menu.menuData.vodka],
+      aperitives: [...enTranslations.menu.menuData.aperitives],
+      raki: [...enTranslations.menu.menuData.raki],
+      tequila: [...enTranslations.menu.menuData.tequila],
+      whiskey: [...enTranslations.menu.menuData.whiskey],
+      beer: [...enTranslations.menu.menuData.beer],
+      wine: [...enTranslations.menu.menuData.wine],
+      mainDishes: [...enTranslations.menu.menuData.mainDishes],
+      desserts: [...enTranslations.menu.menuData.desserts],
+    }
+  }
+};
+
+
+// --- 3. RUS DİLİ ---
+const ruTranslations = {
+  nav: { az: "AZ", en: "EN", ru: "RU" },
+  preloader: { title: "Snap House" },
+  specialsBanner: {
+    title: "Выбор Шефа",
+    itemName: "Филе-миньон 'Snap'",
+  },
+  modal: {
+    chefPick: "Выбор Шефа",
+    prepTime: "Время приг.",
+    ingredients: "Ингредиенты",
+  },
+  footer: {
+    slogan: "Испытайте кулинарное искусство в каждом 'snap'.",
+    address: "Адрес",
+    call: "Звонок",
+    instagram: "Instagram",
+    scan: "Сканируйте QR, чтобы посмотреть в любое время",
+    rights: `© ${new Date().getFullYear()} Snap House. Все права защищены.`,
+  },
+  menu: {
+    categories: [
+      { key: "nonAlcohol", name: "Безалкогольные" },
+      { key: "lemonade", name: "Лимонады" },
+      { key: "softDrinks", name: "Напитки" },
+      { key: "iceTea", name: "Холодный Чай" },
+      { key: "cocktails", name: "Коктейли" },
+      { key: "shots", name: "Шоты" },
+      { key: "shotSets", name: "Сеты Шотов (x6)" },
+      { key: "signature", name: "Авторские" },
+      { key: "appetizers", name: "Закуски" },
+      { key: "silverSet", name: "Silver Set (Алкоголь)" },
+      { key: "goldSet", name: "Gold Set (Алкоголь)" },
+      { key: "liqueur", name: "Ликер" },
+      { key: "gin", name: "Джин" },
+      { key: "vodka", name: "Водка" },
+      { key: "aperitives", name: "Аперитивы" },
+      { key: "raki", name: "Раки" },
+      { key: "tequila", name: "Текила" },
+      { key: "whiskey", name: "Виски" },
+      { key: "beer", name: "Пиво (Бутылки)" },
+      { key: "wine", name: "Вино" },
+    ],
+    // Məhsul adları və təsvirləri tərcümə edilməlidir
+    // Hələlik ingiliscənin kopyasıdır
+    menuData: {
+      nonAlcohol: enTranslations.menu.menuData.nonAlcohol.map(item => ({
+        ...item,
+        name: item.name.replace("Virgin", "Безалкогольный"), // Sadə bir nümunə
+        description: "Освежающая мята и лайм, без алкоголя.", // Tərcümə edilməlidir
+        ingredients: item.ingredients // Tərcümə edilməlidir
+      })),
+      // BÜTÜN QALAN KATEQORİYALAR TƏRCÜMƏ EDİLMƏLİDİR
+      // HƏLƏLİK EN KOPYASINI İSTİFADƏ EDİRƏM
+      lemonade: [...enTranslations.menu.menuData.lemonade],
+      softDrinks: [...enTranslations.menu.menuData.softDrinks],
+      iceTea: [...enTranslations.menu.menuData.iceTea],
+      cocktails: [...enTranslations.menu.menuData.cocktails],
+      shots: [...enTranslations.menu.menuData.shots],
+      shotSets: [...enTranslations.menu.menuData.shotSets],
+      signature: [...enTranslations.menu.menuData.signature],
+      appetizers: [...enTranslations.menu.menuData.appetizers],
+      silverSet: [...enTranslations.menu.menuData.silverSet],
+      goldSet: [...enTranslations.menu.menuData.goldSet],
+      liqueur: [...enTranslations.menu.menuData.liqueur],
+      gin: [...enTranslations.menu.menuData.gin],
+      vodka: [...enTranslations.menu.menuData.vodka],
+      aperitives: [...enTranslations.menu.menuData.aperitives],
+      raki: [...enTranslations.menu.menuData.raki],
+      tequila: [...enTranslations.menu.menuData.tequila],
+      whiskey: [...enTranslations.menu.menuData.whiskey],
+      beer: [...enTranslations.menu.menuData.beer],
+      wine: [...enTranslations.menu.menuData.wine],
+      mainDishes: [...enTranslations.menu.menuData.mainDishes],
+      desserts: [...enTranslations.menu.menuData.desserts],
+    }
+  }
+};
+
+
+// DÜZƏLİŞ: İndi 'translations' obyektini bu sabitlərdən istifadə edərək yaradırıq.
+// Bu, 'ReferenceError' xətasını həll edir.
+export const translations = {
+  en: enTranslations,
+  az: azTranslations,
+  ru: ruTranslations,
+};

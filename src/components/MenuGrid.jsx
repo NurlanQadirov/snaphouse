@@ -1,29 +1,56 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import MenuItemCard from './MenuItemCard';
 
-// Konteyner animasiyası (Bannerin girməsini gözləyir və yavaş başlayır)
+// Konteyner animasiyası (Daha sürətli stagger)
 const containerVariants = {
   hidden: { }, 
   visible: {
     transition: {
-      staggerChildren: 0.15, // Kartlar arası 0.15s gecikmə
-      delayChildren: 0.7,    // Bütün animasiyanın başlaması üçün 0.7s gözləmə
+      staggerChildren: 0.07, // DƏYİŞİKLİK: Daha sürətli (0.15 idi)
+      delayChildren: 0.4,
     },
   },
 };
 
-// Kartların öz animasiyası (Zərif "spring" effekti ilə aşağıdan gəlmə)
+// Hər bir kartın öz animasiyası (Daha "Səliqəli")
 const itemCardVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 30 }, // DƏYİŞİKLİK: Daha yaxından gəlir (50 idi)
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { type: 'spring', stiffness: 90, damping: 20 }
+    // DƏYİŞİKLİK: "Spring" əvəzinə "Səliqəli" (easeOut) istifadə edirik
+    transition: { 
+      type: "tween", 
+      ease: "easeOut", 
+      duration: 0.4 // 0.4 saniyəyə yerinə oturur
+    }
   },
 };
 
-function MenuGrid({ items, onItemSelected }) {
+// Komponentin qalan hissəsi eynidir
+function MenuGrid({ menuData, selectedCategory, searchTerm, onItemSelected }) {
+
+  // Filtrasiya məntiqi
+  const filteredItems = useMemo(() => {
+    
+    // 1. Axtarış varsa
+    if (searchTerm) {
+      const lowerCaseSearch = searchTerm.toLowerCase();
+      const allItems = Object.values(menuData).flat(); 
+      
+      return allItems.filter(item => 
+        (item.name && item.name.toLowerCase().includes(lowerCaseSearch)) ||
+        (item.description && item.description.toLowerCase().includes(lowerCaseSearch)) ||
+        (item.ingredients && item.ingredients.join(' ').toLowerCase().includes(lowerCaseSearch))
+      );
+    }
+    
+    // 2. Axtarış yoxdursa
+    return menuData[selectedCategory] || [];
+
+  }, [searchTerm, selectedCategory, menuData]);
+
   return (
     <motion.div
       layout
@@ -32,18 +59,22 @@ function MenuGrid({ items, onItemSelected }) {
       initial="hidden"
       animate="visible"
     >
-      {/* 'AnimatePresence' burada lazımsızdır, çünki
-        'Menu.jsx'-dəki 'key' dəyişikliyi bütün komponenti
-        yenidən qurur və bu animasiyanı tətikləyir.
-      */}
-      {items.map((item) => (
+      {/* Nəticəni ekrana veririk */}
+      {filteredItems.map((item) => (
         <MenuItemCard
-          key={item.id} // Hər kartın öz 'key'-i olmalıdır
+          key={item.id}
           item={item}
           variants={itemCardVariants} 
           onClick={() => onItemSelected(item)}
         />
       ))}
+      
+      {/* Axtarış nəticəsi boşdursa */}
+      {filteredItems.length === 0 && (
+        <p className="text-off-white/60 text-center col-span-1 md:col-span-2">
+          Axtarışınıza uyğun nəticə tapılmadı.
+        </p>
+      )}
     </motion.div>
   );
 }

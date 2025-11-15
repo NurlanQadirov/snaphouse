@@ -46,13 +46,15 @@ function App() {
   const handleItemSelected = (item) => setSelectedItem(item);
 
   return (
-    // DƏYİŞİKLİK: 'h-screen' əlavə edildi (ekran hündürlüyü)
+    // 1. ƏSAS KONTEYNER (Bütün pəncərəni tutur)
     <div className="App relative bg-premium-black overflow-hidden h-screen">
       
+      {/* 2. Pre-loader (Ən yuxarıda) */}
       <AnimatePresence>
         {isLoading && <Preloader />} 
       </AnimatePresence>
 
+      {/* 3. ƏSAS SAYT MƏZMUNU (Preloader-dən sonra gəlir) */}
       <AnimatePresence>
         {!isLoading && (
           <motion.div
@@ -60,45 +62,44 @@ function App() {
             variants={appVariants}
             initial="hidden"
             animate="visible"
-            // DƏYİŞİKLİK: 'h-full' əlavə edildi (valideynin hündürlüyünü al)
-            className="h-full" 
+            className="h-full"
           >
-            {/* Modal açıldıqda arxada qalan məzmun */}
+            {/* 3.1. SAYTIN MƏZMUNU (Kiçilən hissə) */}
             <motion.div
               variants={mainContentVariants}
               animate={selectedItem ? "open" : "closed"}
-              className="will-change-transform h-full flex flex-col" // DƏYİŞİKLİK: 'h-full flex flex-col'
+              className="will-change-transform h-full flex flex-col relative z-1"
             >
               <Navbar />
-              
-              {/* DƏYİŞİKLİK: 'flex-1' (qalan bütün boşluğu doldur) */}
               <main ref={mainContentRef} className="flex-1 overflow-y-auto">
                 <div className="pt-20" /> 
                 <Menu 
                   onItemSelected={handleItemSelected} 
                   mainContentRef={mainContentRef}
                 />
-                <Footer /> {/* DƏYİŞİKLİK: Footer-i main-in içinə daşıdıq ki, birlikdə scroll olsun */}
+                <Footer />
               </main>
-              
-              {/* Footer buradan silindi */}
-              
             </motion.div>
-
-            <AnimatePresence>
-              {selectedItem && (
-                <ItemModal 
-                  item={selectedItem} 
-                  onClose={handleCloseModal} 
-                />
-              )}
-            </AnimatePresence>
-
-            <ScrollToTop scrollRef={mainContentRef} />
-
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* 4. MODAL (ƏN YUXARI SƏVİYYƏDƏ) */}
+      {/* DÜZƏLİŞ BURADADIR: Modal artıq 'main-app' div-nin içində DEYİL. */}
+      {/* O, 'div.App'-in birbaşa övladıdır. */}
+      <AnimatePresence>
+        {selectedItem && (
+          <ItemModal 
+            item={selectedItem} 
+            onClose={handleCloseModal} 
+          />
+        )}
+      </AnimatePresence>
+
+      {/* 5. SCROLL DÜYMƏSİ (ƏN YUXARI SƏVİYYƏDƏ) */}
+      {/* Bu da 'div.App'-in birbaşa övladıdır. */}
+      {!isLoading && <ScrollToTop scrollRef={mainContentRef} />}
+
     </div>
   );
 }

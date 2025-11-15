@@ -1,10 +1,12 @@
 import React from 'react';
-// YENİ: MapPin (Ünvan) və Smartphone (Telefon) ikonları
 import { Instagram, MapPin, Smartphone } from 'lucide-react';
 import Logo from './Logo';
-import { motion } from 'framer-motion'; // Hovr effekti üçün
+import { motion } from 'framer-motion';
+import { useLanguage } from '../context/LanguageContext'; // YENİ İMPORT
 
 function Footer() {
+  const { texts } = useLanguage(); // Dili götürürük
+
   return (
     <footer className="py-12 bg-premium-black border-t border-gold/20 mt-16">
       <div className="max-w-5xl mx-auto px-6 text-center text-off-white/60">
@@ -12,36 +14,33 @@ function Footer() {
           <Logo />
         </div>
         
-        {/* YENİ: Premium sloqan */}
+        {/* Sloqan (dildən gəlir) */}
         <p className="font-serif text-lg italic text-off-white/80 mb-8">
-          "Experience culinary art in every snapshot."
+          "{texts.footer.slogan}"
         </p>
 
-        {/* YENİ: İkon siyahısı (Ünvan, Telefon, İnstagram) */}
+        {/* İkonlar (dildən gəlir) */}
         <div className="flex justify-center items-center space-x-8 mb-10">
-          {/* Ünvan */}
           <motion.a 
-            href="https://maps.google.com/" // Hələlik placeholder
+            href="https://maps.google.com/" 
             target="_blank" 
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, color: '#D4AF37' }}
             className="flex flex-col items-center text-off-white/70"
           >
             <MapPin size={24} />
-            <span className="text-xs mt-1">Address</span>
+            <span className="text-xs mt-1">{texts.footer.address}</span>
           </motion.a>
           
-          {/* Telefon */}
           <motion.a 
-            href="tel:+994500000000" // Hələlik placeholder
+            href="tel:+994500000000"
             whileHover={{ scale: 1.1, color: '#D4AF37' }}
             className="flex flex-col items-center text-off-white/70"
           >
             <Smartphone size={24} />
-            <span className="text-xs mt-1">Call</span>
+            <span className="text-xs mt-1">{texts.footer.call}</span>
           </motion.a>
 
-          {/* İnstagram (dizaynı digərlərinə uyğunlaşdırıldı) */}
           <motion.a 
             href="https://www.instagram.com/snaphousebaku/" 
             target="_blank" 
@@ -50,15 +49,16 @@ function Footer() {
             className="flex flex-col items-center text-off-white/70"
           >
             <Instagram size={24} />
-            <span className="text-xs mt-1">Instagram</span>
+            <span className="text-xs mt-1">{texts.footer.instagram}</span>
           </motion.a>
         </div>
         
+        {/* Qalan mətnlər (dildən gəlir) */}
         <p className="text-sm">
-          "Scan the QR to view anytime"
+          "{texts.footer.scan}"
         </p>
         <p className="text-xs mt-4">
-          © {new Date().getFullYear()} Snap House. All Rights Reserved.
+          {texts.footer.rights}
         </p>
       </div>
     </footer>
